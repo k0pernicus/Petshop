@@ -10,12 +10,13 @@ sexeJoueur = ""
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
+liste_cmd = ["aide", "acheter_animaux", "acheter_nourriture", "consulter_compte_banquaire"]
 
 #Instanciation
 liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", "20", "15", 4500))
 liste_animaleries.append(Petshop.Petshop("Pattoune", "15", "15", 3700))
 liste_animaleries.append(Petshop.Petshop("Animalia", "15", "18", 3200))
-liste_animaleries.append(Petshop.Petshop("Hamstagram", "12", "20", 2200))
+liste_animaleries.append(Petshop.Petshop("Hamsteragram", "12", "20", 2200))
 
 #Fonctions
 
@@ -65,10 +66,19 @@ def delAll():
 
 def printCredits():
 	"""Affiche les crédits de fin"""
-	print("\n")
 	print("**FIN DU JEU!!")
 	print("Merci d'y avoir jouer!")
 	print("Des remarques -> antonin[dot]carette[at]gmail[dot]com")
+
+	#CMD
+
+def print_aide():
+	"""Fonction permettant d'afficher une liste exhaustive des commandes accessibles dans le terminal"""
+	print("\n")
+	print('Liste des commandes:')
+	print('aide:', 'affiche la liste des commandes du programme')
+	print('contact:', 'affiche les informations concernant l\'auteur du jeu, et comment le contacter')
+	print("\n")
 
 #MAIN
 
