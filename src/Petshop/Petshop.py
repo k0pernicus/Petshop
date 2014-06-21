@@ -28,7 +28,8 @@ class Petshop(object):
         self._player = player
         self._proprietaire = proprietaire
         self._liste_employes = []
-        self._liste_animaux = []
+        self._liste_animaux = {"Hamster": [], "Dog": [], "Perruche": []}
+        self._dict_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
 
     def __del__(self):
         """Déconstructeur d'une animalerie"""
@@ -91,16 +92,29 @@ class Petshop(object):
 
     def getListeAnimaux(self):
         "Méthode permettant de retourner la liste des animaux, contenue dans l'objet Petshop"
-        for animal in self._liste_animaux:
-            animal.printInfo()
+        for animals in self._liste_animaux:
+            for animal in self._liste_animaux[animals]:
+                animal.printInfo()
 
     def addAnimal(self, animal):
         "Méthode permettant d'ajouter à la liste des animaux, un animal (donné en paramètre)"
-        self._liste_animaux.append(animal)
+        self._liste_animaux[animal.getRace()].append(animal)
 
     def setListeAnimaux(self, listeDanimaux):
         "Méthode permettant de modifier toute la liste des animaux"
-        self._liste_animaux = listeDanimaux
+        self._liste_animaux[listeDanimaux[0].getRace()] = listeDanimaux
+
+    def getNourritureParAnimal(self, animal):
+        "Méthode permettant de retourner le nombre de nourriture restante pour un animal donné"
+        return self._dict_nourriture[animal]
+
+    def addNourritureParAnimal(self, animal):
+        "Méthode permettant d'ajouter de la nourriture à un animal"
+        self._dict_nourriture[animal] = self._dict_nourriture[animal] + 1;
+
+    def rmNourritureParAnimal(self, animal):
+        "Méthode permettant de supprimer de la nourriture à un animal"
+        self._dict_nourriture[animal] = self._dict_nourriture[animal] - 1;
 
     def printInfo(self):
         "Méthode permettant d'afficher toutes les informations déjà données, sur un objet Petshop"
