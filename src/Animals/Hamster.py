@@ -1,0 +1,16 @@
+#Classe Hamster
+#Auteur: Carette Antonin
+#Classe permettant d'instancier un objet représentant l'animal "Hamster"
+
+from Animal import *
+
+class Hamster(Animal):
+    """Classe permettant d'instancier un objet représentation l'animal 'Hamster'"""
+
+    def __init__(self, pts_de_vie, sexe):
+    	"""Constructeur d'un objet Hamster"""
+        Animal.__init__(self, "Hamster", pts_de_vie, sexe)
+
+    def __del__(self):
+    	"""Destructeur d'un objet Hamster"""
+    	Animal.__del__(self)
