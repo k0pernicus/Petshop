@@ -91,6 +91,7 @@ if __name__ == "__main__":
 	global sexeJoueur
 	global difficulte
 	global choix_animalerie
+	global liste_cmd
 
 	#Affichage du message de bienvenue
 	printBienvenue()
@@ -124,10 +125,26 @@ if __name__ == "__main__":
 
 	print("\nVous avez choisi l'animalerie", animalerie_choisie.getNom())
 
+	print("\nLe jeux va commencé - tapez aide dans la console, afin d'obtenir une liste exhaustive des commandes pour le jeu")
+
 	##LE JEU COMMENCE
+
+	#Variable contenant la commande principale du jeu à rentrer
+	commande = ""
 
 	#Condition de sortie -> Le joueur est endetté, et détient une dette de -(argentDepart)
 	while (not player.isTerm(-argentDepart)):
+
+		print("Commande:",)
+
+		commande = sys.stdin.readline().lower().strip()
+
+		while (commande not in liste_cmd):
+			print("Mauvaise commande - veuillez réessayer")
+			commande = sys.stdin.readline().lower().strip()
+
+		if (commande == "aide"):
+			print_aide()
 
 		#Tour de jeu // TODO
 
