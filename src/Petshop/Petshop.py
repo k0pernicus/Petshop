@@ -154,5 +154,6 @@ class Petshop(object):
         "Méthode permettant d'afficher les informations concernant l'animalerie, au début d'un tour"
         print("Nom de l'animalerie:", self.getNom())
         print("Dégâts occasionnés à l'animalerie:", self.getDegats())
-        print("Nombre d'animaux:", self.getNbrAnimaux())
+        print("Nombre d'animaux morts par nuit:", self.rmAnimalMort())
+        print("Nombre d'animaux restants:", self.getNbrAnimaux())
         print("Nombre d'employés y travaillant:", len(self.getListeEmployes()))
