@@ -4,12 +4,8 @@ Petshop
 Petshop game - Python language
 ------------------------------
 
-Comment se passe un tour de jeu?
+Petshop est un jeu se jouant exclusivement sur console.
 
--> On dénombre les morts
+Encore en développement!!!!
 
--> Elle reçoit son inventaire / doit payer la livraison
-
--> Elle reçoit ses clients
-
--> Elle commande pour le lendemain + travaux
+N'hésitez pas à me contacter si vous avez des remarques à faire: antonin[dot]carette[at]gmail[dot]com!
