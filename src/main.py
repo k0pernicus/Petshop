@@ -296,7 +296,8 @@ if __name__ == "__main__":
 		print("\n")
 
 		#Arrivée des commandes et transfert sur le stock de l'animalerie
-		transfertCommande()
+		if (nbrTours != 0):
+			transfertCommande(player)
 
 		#Attente de la commande utilisateur
 		print("Commande:",)
