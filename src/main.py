@@ -195,6 +195,9 @@ if __name__ == "__main__":
 		if (commande == "aide"):
 			print_aide()
 
+		if (commande == "info_animaux"):
+			print_info_animaux()
+
 		#Tour de jeu // TODO
 
 		print("Je joues!")
