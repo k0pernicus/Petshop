@@ -231,6 +231,8 @@ if __name__ == "__main__":
 	#Condition de sortie -> Le joueur est endetté, et détient une dette de -(argentDepart)
 	while (not player.isTerm(-argentDepart)):
 
+		print("Tour n°:", nbrTours)
+
 		#Affichage des infos du joueur
 		printInfoJoueur(player)
 
@@ -238,6 +240,8 @@ if __name__ == "__main__":
 
 		#Affichage des infos de l'animalerie
 		printInfoAnimalerie()
+
+		print("\n")
 
 		#Attente de la commande utilisateur
 		print("Commande:",)
@@ -265,10 +269,6 @@ if __name__ == "__main__":
 
 		if (commande == "contact"):
 			print_contact()
-
-		#Tour de jeu // TODO
-
-		player.setMontant(-10000)
 
 		nbrTours = nbrTours+1;
 
