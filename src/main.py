@@ -65,11 +65,33 @@ def printAnimaleries():
 		print("\n")
 		i = i + 1
 
-def delAll():
-	"""Supprime les objets créés"""
-	player.__del__
-	for animalerie in liste_animaleries:
-		animalerie.__del__
+def printInfoJoueur(joueur):
+	"""Affichage des données du joueur - en début de tour"""
+	joueur.printInfo()
+
+def printInfoAnimalerie():
+	global animalerie_choisie
+	animalerie_choisie.printInfo()
+
+def printInstructions():
+	"""Méthode permettant d'afficher les instructions à l'écran"""
+	print("Voici les instructions")
+	print("Vous êtes propriétaire d'une animalerie, et désirez que tout aille pour le mieux (logique!). Or, tout n'est pas aussi rose que celà...")
+	print("Votre but est donc de survivre un maximum de tours.")
+	print("Voici comment va se passer chaque tour de jeu:")
+	print("\t --Vous dénombrez les animaux morts du jour (malheureusement... :'(),")
+	print("\t --Vous recevez votre inventaire, et devez payer la livraison,")
+	print("\t --Vous recevez un nombre indéfini de clients,")
+	print("\t --Vous pouvez commander de nouvelles choses pour le lendemain, effectuer des travaux dans votre animalerie, embaucher du personnel, etc...")
+	print("\n ATTENTION!")
+	print("Vous avez une liste de choses qui pourront vous mettre dans l'embarras (ce ne serai pas marrant sinon!):")
+	print("\t --Votre magasin détient des dégâts - cela influe sur la santé des animaux! Plus les dégâts seront forts et moins vos animaux vivront longtemps... De plus, plus ils seront vite malades, ce qui ne pourrai pas plaire au client...")
+	print("\t --Votre animal a besoin de nourriture pour vivre! Il faudra donc en acheter régulièrement! Un animal sans nourriture s'affaibliera, et pourra être malade très vite...")
+	print("\t --Faites attention à votre argent! Vous en avez besoin pour vivre. Aussi, vous avez droit à un découvert équivalent à votre somme de départ - si vous le dépassez, c'est foutu...")
+	print("\t --Des clients pourraient venir vous apporter de petits animaux abandonnés (so cuuute!) - attention à celà! Les prendre pourraient diminuer drastiquement votre stock de nourriture, mais ne pas les prendre pourraient faire que vos clients vous prennent pour un monstre, vous fasse une mauvaise pub et fasse fuir vos employés...")
+	print("\t --C'est bien d'avoir un beau magasin, et d'embaucher du personnel! Attention toutefois: plus vous avez d'animaux et plus de dégâts il y aura! Aussi, il se pourrai qu'un événement inattendu vienne vous causer du tord dans un tour (une tempête, une tornade, etc...). De plus, embauche beaucoup de personnel coûte, et ils ne seront pas content si jamais vous les payez tard...")
+	print("\n Alors, prêt à jouer? :-) C'est parti!")
+	print("\nPour avoir une liste des commandes pouvant être exécutées durant le jeu, tapez aide dans la console!\n")
 
 def printCredits():
 	"""Affiche les crédits de fin"""
