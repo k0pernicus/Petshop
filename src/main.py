@@ -48,6 +48,12 @@ def getArgent():
 	if (difficulte == "hard"):
 		return 2500
 
+def delAll():
+	"""Supprime les objets créés"""
+	player.__del__
+	for animalerie in liste_animaleries:
+		animalerie.__del__
+
 def printAnimaleries():
 	"""Affichage des animaleries créés"""
 	global liste_animaleries
