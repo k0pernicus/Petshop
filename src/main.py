@@ -109,6 +109,11 @@ def print_aide():
 	print('contact:', 'affiche les informations concernant l\'auteur du jeu, et comment le contacter')
 	print("\n")
 
+def print_info_animaux():
+	"""Fonction permettant d'afficher une liste exhaustive des animaux et de leurs propriétés"""
+	global animalerie_choisie
+	animalerie_choisie.getListeAnimaux()
+
 #MAIN
 
 if __name__ == "__main__":
