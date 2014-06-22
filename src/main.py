@@ -233,9 +233,16 @@ if __name__ == "__main__":
 		if (commande == "info_animaux"):
 			print_info_animaux()
 
-		#Tour de jeu // TODO
+		if (commande == "consulter_compte_banquaire"):
+			print_info_banquaire(player)
 
-		print("Je joues!")
+		if (commande == "acheter_animal"):
+			fun_acheter_animal(player)
+
+		if (commande == "acheter_nourriture"):
+			fun_acheter_nourriture()
+
+		#Tour de jeu // TODO
 
 		player.setMontant(-10000)
 
