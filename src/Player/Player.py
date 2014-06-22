@@ -45,6 +45,10 @@ class Player(object):
 		"""Méthode permettant de définir un montant d'argent pour le personnage sur lequel on instancie la méthode"""
 		self._argent = argent
 
+	def rmMontant(self, argent):
+		"""Méthode permettant d'enlever un montant de la somme totale du joueur"""
+		self._argent = self._argent - argent
+
 	def isEndette(self):
 		"""Méthode permettant de savoir si le personnage est endetté ou non"""
 		return self._endette
