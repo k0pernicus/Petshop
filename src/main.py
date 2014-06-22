@@ -21,6 +21,7 @@ liste_animaleries = []
 liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "contact"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
+achat_nourriture = []
 
 #Instanciation
 liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", "20", "15", 4500))
