@@ -132,9 +132,16 @@ class Petshop(object):
         else:
             print("Vous n'êtes pas propriétaire de l'animalerie")
         print("Surface de l'animalerie:",self.getSurface())
-        print("Dégâts occasionnée à l'animalerie:", self.getDegats())
+        print("Dégâts occasionnés à l'animalerie:", self.getDegats())
         if (self.isProprietaire()):
             print("Prix de vente de l'animalerie:",self.getPrix())
         else:
             print("Prix d'achat de l'animalerie:",self.getPrix())
+        print("Nombre d'employés y travaillant:", len(self.getListeEmployes()))
+
+    def printInfoTour(self):
+        "Méthode permettant d'afficher les informations concernant l'animalerie, au début d'un tour"
+        print("Nom de l'animalerie:", self.getNom())
+        print("Dégâts occasionnés à l'animalerie:", self.getDegats())
+        print("Nombre d'animaux:", self.getNbrAnimaux())
         print("Nombre d'employés y travaillant:", len(self.getListeEmployes()))
