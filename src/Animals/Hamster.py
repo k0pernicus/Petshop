@@ -2,15 +2,15 @@
 #Auteur: Carette Antonin
 #Classe permettant d'instancier un objet représentant l'animal "Hamster"
 
-from Animal import *
+from Animals import Animal
 
-class Hamster(Animal):
+class Hamster(Animal.Animal):
     """Classe permettant d'instancier un objet représentation l'animal 'Hamster'"""
 
-    def __init__(self, pts_de_vie, sexe):
+    def __init__(self, sexe):
     	"""Constructeur d'un objet Hamster"""
-        Animal.__init__(self, "Hamster", pts_de_vie, sexe)
+    	Animal.Animal.__init__(self, "Hamster", 30, sexe, 5, 10)
 
     def __del__(self):
     	"""Destructeur d'un objet Hamster"""
-    	Animal.__del__(self)
+    	Animal.Animal.__del__(self)
