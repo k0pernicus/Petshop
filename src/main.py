@@ -113,8 +113,12 @@ def print_aide():
 	"""Fonction permettant d'afficher une liste exhaustive des commandes accessibles dans le terminal"""
 	print("\n")
 	print('Liste des commandes:')
-	print('aide:', 'affiche la liste des commandes du programme')
-	print('contact:', 'affiche les informations concernant l\'auteur du jeu, et comment le contacter')
+	print('\taide:', 'affiche la liste des commandes du programme')
+	print('\tcontact:', 'affiche les informations concernant l\'auteur du jeu, et comment le contacter')
+	print('\tinfo_animaux:', 'affiche les informations concernant la liste des animaux achetés')
+	print('\tinfo_banquaire:', 'affiche les informtions banquaires du joueur')
+	print('\tacheter_animal:', 'permet d\'acheter un animal')
+	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
 	print("\n")
 
 def print_info_animaux():
