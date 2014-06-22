@@ -110,6 +110,8 @@ def delAll():
 	for animalerie in liste_animaleries:
 		animalerie.__del__
 
+#Fonctions PRINT
+
 def printBienvenue():
 	"""Affichage d'un message de bienvenue"""
 	print("\nJOUEUR, BIENVENUE DANS \"PETSHOP\"!!\n")
