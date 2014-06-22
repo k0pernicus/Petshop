@@ -11,7 +11,7 @@ nbrTours = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
-liste_cmd = ["aide", "acheter_animaux", "acheter_nourriture", "consulter_compte_banquaire"]
+liste_cmd = ["aide", "acheter_animaux", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire"]
 
 #Instanciation
 liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", "20", "15", 4500))
