@@ -1,3 +1,6 @@
+#Classe Main
+#Auteur: Carette Antonin
+
 from Animals import Animal
 from Animals import Hamster
 from Animals import Perruche
