@@ -20,6 +20,7 @@ choix_animalerie = -1
 liste_animaleries = []
 liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "contact"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
+achat_animaux = []
 
 #Instanciation
 liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", "20", "15", 4500))
@@ -55,6 +56,26 @@ def getArgent():
 		return 5000
 	if (difficulte == "hard"):
 		return 2500
+
+def transfertCommande():
+	"""Méthode permettant de transférer les commandes vers le stock de l'animalerie"""
+	global animalerie_choisie
+	global achat_animaux
+	for animal in achat_animaux:
+		animalerie_choisie.addAnimal(animal)
+		print("Un",animal.getRace(),"vient d'être ajouté à votre stock!")
+	reinitAchatAnimaux()
+	print("\n")
+
+def reinitAchatAnimaux():
+	"""Méthode permettant de réinitialiser la liste des animaux achetés"""
+	global achat_animaux
+	achat_animaux = []
+
+def diminuer_pts_de_vie(pts):
+	"""Méthode permettant de diminuer tous les points de vie des animaux présents dans l'animalerie"""
+	global animalerie_choisie
+	animalerie_choisie.diminuerPtsDeVie(pts)
 
 def delAll():
 	"""Supprime les objets créés"""
@@ -145,6 +166,7 @@ def fun_acheter_animal(player):
 	"""Fonction permettant d'acheter un animal, pour son animalerie"""
 	global liste_animaux
 	global animalerie_choisie
+	global achat_animaux
 	choixAnimal = ""
 	print("Veuillez entrer l'espèce animale que vous voulez choisir [Hamster, Perruche, Chien]: ")
 	while (choixAnimal not in liste_animaux):
@@ -161,7 +183,7 @@ def fun_acheter_animal(player):
 	if (choixAnimal == "Dog"):
 		animal = Dog.Dog(sexe)
 	player.rmMontant(animal.getPrixAchat())
-	animalerie_choisie.addAnimal(animal)
+	achat_animaux.append(animal)
 	print("\n")
 	print("Vous venez d'acheter", animal.printInfo())
 	print("\n")
@@ -242,6 +264,9 @@ if __name__ == "__main__":
 		printInfoAnimalerie()
 
 		print("\n")
+
+		#Arrivée des commandes et transfert sur le stock de l'animalerie
+		transfertCommande()
 
 		#Attente de la commande utilisateur
 		print("Commande:",)
