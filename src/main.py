@@ -195,6 +195,8 @@ if __name__ == "__main__":
 
 	print("\nVous avez choisi l'animalerie", animalerie_choisie.getNom())
 
+	animalerie_choisie.setProprietaire(True, player)
+
 	print("\nLe jeux va pouvoir commencer!")
 
 	##LE JEU COMMENCE
@@ -209,7 +211,7 @@ if __name__ == "__main__":
 	while (not player.isTerm(-argentDepart)):
 
 		#Affichage des infos du joueur
-		printInfoJoueur()
+		printInfoJoueur(player)
 
 		print("\n")
 
@@ -220,8 +222,6 @@ if __name__ == "__main__":
 		print("Commande:",)
 
 		commande = sys.stdin.readline().lower().strip()
-
-		printInfoJoueur()
 
 		while (commande not in liste_cmd):
 			print("Mauvaise commande - veuillez réessayer")
