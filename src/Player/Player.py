@@ -67,6 +67,6 @@ class Player(object):
 	def printInfo(self):
 		"""Méthode permettant d'afficher toutes les informations nécessaires sur le joueur"""
 		print("Joueur: ", self.getNom())
-		print("Propriétaire: ,"self.isProprietaire())
-		print("Argent restant: ", self.getMontant())
-		print("Endetté: ", self.isEndette())
+		print("Propriétaire:", self.isProprietaire())
+		print("Argent restant:", self.getMontant())
+		print("Endetté:", self.isEndette())
