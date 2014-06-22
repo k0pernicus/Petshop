@@ -99,6 +99,11 @@ def diminuer_pts_de_vie(pts):
 	global animalerie_choisie
 	animalerie_choisie.diminuerPtsDeVie(pts)
 
+def consommationDeNourriture():
+	"Méthode permettant aux animaux de l'animalerie de consommer de la nourriture"
+	global animalerie_choisie
+	animalerie_choisie.consommationDeNourriture()
+
 def delAll():
 	"""Supprime les objets créés"""
 	player.__del__
@@ -326,6 +331,8 @@ if __name__ == "__main__":
 
 		if (commande == "contact"):
 			print_contact()
+
+		consommationDeNourriture()
 
 		nbrTours = nbrTours+1;
 
