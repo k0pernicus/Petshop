@@ -1,8 +1,12 @@
 from Animals import Animal
+from Animals import Hamster
+from Animals import Perruche
+from Animals import Dog
 from Petshop import Petshop
 from Player import Player
 
 import sys
+import random
 
 #Paramètres généraux
 nomJoueur = ""
