@@ -15,7 +15,7 @@ nbrTours = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
-liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire"]
+liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "contact"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 
 #Instanciation
@@ -241,6 +241,9 @@ if __name__ == "__main__":
 
 		if (commande == "acheter_nourriture"):
 			fun_acheter_nourriture()
+
+		if (commande == "contact"):
+			print_contact()
 
 		#Tour de jeu // TODO
 
