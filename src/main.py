@@ -119,6 +119,36 @@ def print_info_animaux():
 	global animalerie_choisie
 	animalerie_choisie.getListeAnimaux()
 
+def print_info_banquaire(player):
+	"""Fonction permettant d'afficher une sortie du compte en banque du joueur"""
+	print("Compte en banque du joueur: ", player.getMontant(), "\n")
+
+def fun_acheter_animal(player):
+	"""Fonction permettant d'acheter un animal, pour son animalerie"""
+	global liste_animaux
+	global animalerie_choisie
+	choixAnimal = ""
+	print("Veuillez entrer l'espèce animale que vous voulez choisir [Hamster, Perruche, Chien]: ")
+	while (choixAnimal not in liste_animaux):
+		choixAnimal = sys.stdin.readline().capitalize().strip()
+	alea = random.randrange(0,2,1)
+	if (alea == 0):
+		sexe = "Male"
+	else:
+		sexe = "Femelle"
+	if (choixAnimal ==  "Hamster"):
+		animal = Hamster.Hamster(sexe)
+	if (choixAnimal == "Perruche"):
+		animal = Perruche.Perruche(sexe)
+	if (choixAnimal == "Dog"):
+		animal = Dog.Dog(sexe)
+	player.rmMontant(animal.getPrixAchat())
+	animalerie_choisie.addAnimal(animal)
+
+
+def fun_acheter_nourriture():
+	"""Fonction permettant d'acheter de la nourriture pour un type d'animal, ou plusieurs"""
+
 #MAIN
 
 if __name__ == "__main__":
