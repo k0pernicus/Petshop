@@ -124,11 +124,15 @@ def print_aide():
 def print_info_animaux():
 	"""Fonction permettant d'afficher une liste exhaustive des animaux et de leurs propriétés"""
 	global animalerie_choisie
+	print("\n")
 	animalerie_choisie.getListeAnimaux()
+	print("\n")
 
 def print_info_banquaire(player):
 	"""Fonction permettant d'afficher une sortie du compte en banque du joueur"""
-	print("Compte en banque du joueur: ", player.getMontant(), "\n")
+	print("\n")
+	print("Compte en banque du joueur: ", player.getMontant())
+	print("\n")
 
 def print_contact():
 	"""Fonction permettant d'afficher les informations du développeur"""
