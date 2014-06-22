@@ -218,7 +218,7 @@ if __name__ == "__main__":
 
 	animalerie_choisie.setProprietaire(True, player)
 
-	print("\nLe jeux va pouvoir commencer!")
+	print("\nLe jeu va pouvoir commencer!")
 
 	##LE JEU COMMENCE
 
