@@ -123,6 +123,13 @@ def print_info_banquaire(player):
 	"""Fonction permettant d'afficher une sortie du compte en banque du joueur"""
 	print("Compte en banque du joueur: ", player.getMontant(), "\n")
 
+def print_contact:
+	"""Fonction permettant d'afficher les informations du développeur"""
+	print("\n")
+	print("Développeur principal: Carette Antonin")
+	print("Contact: antonin[dot]carette[at]gmail[dot]com")
+	print("\n")
+
 def fun_acheter_animal(player):
 	"""Fonction permettant d'acheter un animal, pour son animalerie"""
 	global liste_animaux
