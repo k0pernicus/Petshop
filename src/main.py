@@ -7,6 +7,7 @@ import sys
 #Paramètres généraux
 nomJoueur = ""
 sexeJoueur = ""
+nbrTours = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
@@ -89,6 +90,7 @@ if __name__ == "__main__":
 	#Chargement des variables globales
 	global nomJoueur
 	global sexeJoueur
+	global nbrTours
 	global difficulte
 	global choix_animalerie
 	global liste_cmd
@@ -151,6 +153,8 @@ if __name__ == "__main__":
 		print("Je joues!")
 
 		player.setMontant(-10000)
+
+		nbrTours = nbrTours+1;
 
 
 	##FIN DU JEU##
