@@ -112,6 +112,17 @@ class Petshop(object):
         "Méthode permettant de modifier toute la liste des animaux"
         self._liste_animaux[listeDanimaux[0].getRace()] = listeDanimaux
 
+    def rmAnimalMort(self):
+        "Méthode permettant de dénombrer, et de supprimer les animaux morts au cours de la nuit"
+        nbrMort = 0
+        for animals in self._liste_animaux:
+            for animal in self._liste_animaux[animals]:
+                if (animal.isMort()):
+                    del animal
+                    nbrMort = nbrMort + 1
+        return nbrMort
+
+
     def getNourritureParAnimal(self, animal):
         "Méthode permettant de retourner le nombre de nourriture restante pour un animal donné"
         return self._dict_nourriture[animal]
