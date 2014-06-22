@@ -79,7 +79,7 @@ def printInfoJoueur(player):
 
 def printInfoAnimalerie():
 	global animalerie_choisie
-	animalerie_choisie.printInfo()
+	animalerie_choisie.printInfoTour()
 
 def printInstructions():
 	"""Méthode permettant d'afficher les instructions à l'écran"""

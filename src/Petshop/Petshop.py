@@ -103,8 +103,8 @@ class Petshop(object):
     def getNbrAnimaux(self):
         "Méthode permettant de retourner le nombre d'animaux restants"
         nbrAnimaux = 0
-        for animals in self._liste_animaux:
-            for animal in self._liste_animaux[animals]:
+        for animals in self._liste_animaux.values():
+            for animal in animals:
                 nbrAnimaux = nbrAnimaux + 1
         return nbrAnimaux
 
@@ -119,11 +119,12 @@ class Petshop(object):
     def rmAnimalMort(self):
         "Méthode permettant de dénombrer, et de supprimer les animaux morts au cours de la nuit"
         nbrMort = 0
-        for animals in self._liste_animaux:
-            for animal in self._liste_animaux[animals]:
+        for animals in self._liste_animaux.values():
+            for animal in animals:
                 if (animal.isMort()):
+                    animals.remove(animal)
                     del animal
-                    nbrMort = nbrMort + 1
+                    nbrMort = nbrMort+1
         return nbrMort
 
 
