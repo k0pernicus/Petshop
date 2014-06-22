@@ -162,6 +162,9 @@ def fun_acheter_animal(player):
 		animal = Dog.Dog(sexe)
 	player.rmMontant(animal.getPrixAchat())
 	animalerie_choisie.addAnimal(animal)
+	print("\n")
+	print("Vous venez d'acheter", animal.printInfo())
+	print("\n")
 
 
 def fun_acheter_nourriture():
