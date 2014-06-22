@@ -18,6 +18,8 @@ class Animal(object):
         self._prixVente = prixVente
         self._prixAchat = prixAchat
         self._enceinte = False
+        #Chaque animal consomme, par défaut, une unité de nourriture
+        self._consommationUnite = 1
         self._tps_gestation = 0
 
     def __del__(self):
@@ -76,17 +78,27 @@ class Animal(object):
         "Méthode permettant de modifier le prix de vente de l'animal"
         self._prix = prixVente
 
+    def getConsommationUnite(self):
+        "Méthode permettant de retourner le nombre d'unités de nourriture consommé par l'animal"
+        return self._consommationUnite
+
+    def setConsommationUnite(self, conso):
+        "Méthode permettant de modifier le nombre d'unités de nourriture consommé par l'animal"
+        self._consommationUnite = conso
+
     def getEnceinte(self):
         "Méthode permettant de retourner le booléen de fertilité, caractérisant l'objet Animal"
         return self._enceinte
 
     def setEnceinte(self):
-        "Méthode permettant de modifier le booléen de fertilité, caractérisant l'objet Animal"
+        "Méthode permettant de modifier le booléen de fertilité, caractérisant l'objet Animal - aussi, l'animal consommera 2 fois plus d'unités de nourriture!"
         if self.getSexe() == "Femelle":
             if self.getEnceinte():
                 self._enceinte = False
+                self.setConsommationUnite(1)
             else:
                 self._enceinte = True
+                self.setConsommationUnite(2)
 
     def decTpsGestation(self):
         "Méthode permettant de décrémenter le temps de gestation d'une femelle enceinte"
