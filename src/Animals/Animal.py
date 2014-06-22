@@ -36,6 +36,12 @@ class Animal(object):
         "Méthode permettant de modifier les points de vie d'un objet Animal"
         self._pts_de_vie = pts_de_vie
 
+    def isMort(self):
+        "Méthode permettant de savoir si l'animal est mort ou non"
+        if (self.getPtsDeVie() == 0):
+            return True
+        return False
+
     def getSante(self):
         "Méthode permettant d'obtenir les informations de santé sur un objet Animal"
         if self.getPtsDeVie() < (self.getPtsDeVieMax()/2):
