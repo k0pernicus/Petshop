@@ -251,7 +251,7 @@ if __name__ == "__main__":
 
 	##FIN DU JEU##
 
-	print("Le joueur a perdu...")
+	print("Vous avez perdu...")
 
 	#Déconstruction des objets créés auparavant
 	delAll()
