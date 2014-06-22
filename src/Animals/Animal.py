@@ -6,14 +6,17 @@ class Animal(object):
     "Classe permettant d'instancier un animal"
 
     #Constructeur d'un objet Animal
-    def __init__(self, race, pts_de_vie, sexe):
+    def __init__(self, race, pts_de_vie, sexe, prixAchat, prixVente):
         """Constructeur d'un animal, caractérisé par:
             -ses points de vie,
-            -son sexe"""
+            -son sexe
+            -son prix"""
         self._race = race
         self._pts_de_vie_max = pts_de_vie
         self._pts_de_vie = pts_de_vie
         self._sexe = sexe
+        self._prixVente = prixVente
+        self._prixAchat = prixAchat
         self._enceinte = False
         self._tps_gestation = 0
 
@@ -52,6 +55,22 @@ class Animal(object):
     def getSexe(self):
         "Méthode permettant de retourner le sexe d'un objet Animal"
         return self._sexe
+
+    def getPrixAchat(self):
+        "Méthode permettant de retourner le prix d'achat de l'animal"
+        return self._prixAchat
+
+    def setPrixAchat(self, prix):
+        "Méthode permettant de modifier le prix d'achat de l'animal"
+        self._prix = prixAchat
+
+    def getPrixVente(self):
+        "Méthode permettant de retourner le prix de vente de l'animal"
+        return self._prixVente
+
+    def setPrixVente(self, prix):
+        "Méthode permettant de modifier le prix de vente de l'animal"
+        self._prix = prixVente
 
     def getEnceinte(self):
         "Méthode permettant de retourner le booléen de fertilité, caractérisant l'objet Animal"
