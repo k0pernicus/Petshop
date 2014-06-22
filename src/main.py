@@ -76,7 +76,7 @@ def paiementLivraisonAnimaux(player):
 	else:
 		montant = 3 * nbrAnimaux
 	player.rmMontant(montant)
-	print(nbrAnimaux,"ont été livrés - paiement de", montant,"crédits.")
+	print(nbrAnimaux,"animal(aux) a(ont) été livré(s) - paiement de", montant,"crédits.")
 
 def paiementLivraisonNourriture(player):
 	"""Méthode permettant de payer la livraison de la nourriture à l'animalerie -> Si 6 et plus de 6 crédits de nourriture, paiement de 10 crédits - sinon, 2 * le nombre de crédits de nourriture"""
@@ -87,7 +87,7 @@ def paiementLivraisonNourriture(player):
 	else:
 		montant = 2 * nbrNourriture
 	player.rmMontant(montant)
-	print("La nourriture a été livré - paiement de", montant,"crédits.")
+	print(nbrNourriture,"crédit(s) de nourriture livré(s) - paiement de", montant,"crédits.")
 
 def reinitAchatAnimaux():
 	"""Méthode permettant de réinitialiser la liste des animaux achetés"""
@@ -147,6 +147,7 @@ def printInstructions():
 	print("Vous avez une liste de choses qui pourront vous mettre dans l'embarras (ce ne serai pas marrant sinon!):")
 	print("\t --Votre magasin détient des dégâts - cela influe sur la santé des animaux! Plus les dégâts seront forts et moins vos animaux vivront longtemps... De plus, plus ils seront vite malades, ce qui ne pourrai pas plaire au client...")
 	print("\t --Votre animal a besoin de nourriture pour vivre! Il faudra donc en acheter régulièrement! Un animal sans nourriture s'affaibliera, et pourra être malade très vite...")
+	print("\t --Les lois de la nature sont imprévisibles! Un papa + une maman = un enfant! Et ça marche aussi avec les animaux... Reproduction aléatoire, mais une nouvelle bouche de plus à nourrir (soit deux unités par femelle enceinte!)")
 	print("\t --Faites attention à votre argent! Vous en avez besoin pour vivre. Aussi, vous avez droit à un découvert équivalent à votre somme de départ - si vous le dépassez, c'est foutu...")
 	print("\t --La livraison est de 3 crédits par animal, 2 crédits par crédit nourriture.\n\t1 animal -> 3 crédits | 10 et + -> 20 crédits\n\t1 crédit de nourriture -> 2 crédits | 6 et + -> 10 crédits")
 	print("\t --Des clients pourraient venir vous apporter de petits animaux abandonnés (so cuuute!) - attention à celà! Les prendre pourraient diminuer drastiquement votre stock de nourriture, mais ne pas les prendre pourraient faire que vos clients vous prennent pour un monstre, vous fasse une mauvaise pub et fasse fuir vos employés...")
