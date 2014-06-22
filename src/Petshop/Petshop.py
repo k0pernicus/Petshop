@@ -127,6 +127,11 @@ class Petshop(object):
                     nbrMort = nbrMort+1
         return nbrMort
 
+    def diminuerPtsDeVie(self, pts):
+        "Méthode permettant de diminuer les points de vie de chaque animal, d'un certain nombre de points"
+        for animals in self._liste_animaux.values():
+            for animal in animals:
+                animal.diminuerPtsDeVie(pts)
 
     def getNourritureParAnimal(self, animal):
         "Méthode permettant de retourner le nombre de nourriture restante pour un animal donné"
