@@ -216,8 +216,9 @@ def fun_acheter_animal(player):
 	print("\n")
 
 
-def fun_acheter_nourriture():
+def fun_acheter_nourriture(player):
 	"""Fonction permettant d'acheter de la nourriture pour un type d'animal, ou plusieurs"""
+	print("Fonction non implantée encore...")
 
 #MAIN
 
