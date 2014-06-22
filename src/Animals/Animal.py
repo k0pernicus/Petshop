@@ -105,8 +105,9 @@ class Animal(object):
         if self.getEnceinte():
             if self._tps_gestation > 0:
                 self._tps_gestation = self._tps_gestation - 1
-            #else: TODO -> Gestation et création d'un nouvel animal
-                #self.accouche()
+            #else: TODO! -> Ajout d'un animal dans l'animalerie
+                #setEnceinte()
+
 
     def getTpsGestation(self):
         "Méthode permettant de retourner le temps de gestation de l'objet Animal"
