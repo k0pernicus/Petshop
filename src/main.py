@@ -255,6 +255,9 @@ if __name__ == "__main__":
 
 		print("Tour n°:", nbrTours)
 
+		#Diminution des points de vie de chaque animal
+		diminuer_pts_de_vie(int(animalerie_choisie.getDegats()) / 10)
+
 		#Affichage des infos du joueur
 		printInfoJoueur(player)
 
