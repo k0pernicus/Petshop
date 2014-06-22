@@ -322,7 +322,7 @@ if __name__ == "__main__":
 			fun_acheter_animal(player)
 
 		if (commande == "acheter_nourriture"):
-			fun_acheter_nourriture()
+			fun_acheter_nourriture(player)
 
 		if (commande == "contact"):
 			print_contact()
