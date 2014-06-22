@@ -54,15 +54,40 @@ def getArgent():
 	if (difficulte == "hard"):
 		return 2500
 
-def transfertCommande():
+def transfertCommande(player):
 	"""Méthode permettant de transférer les commandes vers le stock de l'animalerie"""
 	global animalerie_choisie
 	global achat_animaux
+	global achat_nourriture
+	paiementLivraisonAnimaux(player)
+	paiementLivraisonNourriture(player)
 	for animal in achat_animaux:
 		animalerie_choisie.addAnimal(animal)
 		print("Un",animal.getRace(),"vient d'être ajouté à votre stock!")
 	reinitAchatAnimaux()
 	print("\n")
+
+def paiementLivraisonAnimaux(player):
+	"""Méthode permettant de payer la livraison des animaux à l'animalerie -> Si 10 et plus de 10 animaux, paiement de 20 crédits - sinon, 3 * le nombre d'animaux présents"""
+	global achat_animaux
+	nbrAnimaux = len(achat_animaux)
+	if (nbrAnimaux >= 10):
+		montant = 20
+	else:
+		montant = 3 * nbrAnimaux
+	player.rmMontant(montant)
+	print(nbrAnimaux,"ont été livrés - paiement de", montant,"crédits.")
+
+def paiementLivraisonNourriture(player):
+	"""Méthode permettant de payer la livraison de la nourriture à l'animalerie -> Si 6 et plus de 6 crédits de nourriture, paiement de 10 crédits - sinon, 2 * le nombre de crédits de nourriture"""
+	global achat_nourriture
+	nbrNourriture = len(achat_nourriture)
+	if (nbrNourriture >= 6):
+		montant = 10
+	else:
+		montant = 2 * nbrNourriture
+	player.rmMontant(montant)
+	print("La nourriture a été livré - paiement de", montant,"crédits.")
 
 def reinitAchatAnimaux():
 	"""Méthode permettant de réinitialiser la liste des animaux achetés"""
