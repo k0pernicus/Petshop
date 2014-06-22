@@ -59,3 +59,10 @@ class Player(object):
 			if (self.getMontant() <= argent):
 				return True
 		return False
+
+	def printInfo(self):
+		"""Méthode permettant d'afficher toutes les informations nécessaires sur le joueur"""
+		print("Joueur: ", self.getNom())
+		print("Propriétaire: ,"self.isProprietaire())
+		print("Argent restant: ", self.getMontant())
+		print("Endetté: ", self.isEndette())
