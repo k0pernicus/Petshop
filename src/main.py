@@ -30,10 +30,6 @@ liste_animaleries.append(Petshop.Petshop("Hamsteragram", "12", "20", 2200))
 
 #Fonctions
 
-def printBienvenue():
-	"""Affichage d'un message de bienvenue"""
-	print("\nJOUEUR, BIENVENUE DANS \"PETSHOP\"!!\n")
-
 def sexeJoueurOk(sexe):
 	"""Vérification de la bonne entrée du sexe du joueur"""
 	return (sexe == "Homme" or sexe == "Femme")
@@ -82,6 +78,10 @@ def delAll():
 	player.__del__
 	for animalerie in liste_animaleries:
 		animalerie.__del__
+
+def printBienvenue():
+	"""Affichage d'un message de bienvenue"""
+	print("\nJOUEUR, BIENVENUE DANS \"PETSHOP\"!!\n")
 
 def printAnimaleries():
 	"""Affichage des animaleries créés"""
