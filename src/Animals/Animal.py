@@ -45,7 +45,7 @@ class Animal(object):
 
     def isMort(self):
         "Méthode permettant de savoir si l'animal est mort ou non"
-        if (self.getPtsDeVie() == 0):
+        if (self.getPtsDeVie() <= 0):
             return True
         return False
 
