@@ -70,9 +70,9 @@ def printAnimaleries():
 		print("\n")
 		i = i + 1
 
-def printInfoJoueur(joueur):
+def printInfoJoueur(player):
 	"""Affichage des données du joueur - en début de tour"""
-	joueur.printInfo()
+	player.printInfo()
 
 def printInfoAnimalerie():
 	global animalerie_choisie
