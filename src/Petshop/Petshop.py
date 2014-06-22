@@ -77,8 +77,10 @@ class Petshop(object):
             return self.getPlayer().isProprietaire()
         return False
 
-    def setProprietaire(self, booleen, proprietaire = None):
+    def setProprietaire(self, booleen, joueur = None):
         "Méthode permettant de modifier le statut 'Proprietaire' du joueur de l'animalerie"
+        if (joueur is not None):
+            self._player = joueur
         if (self.getPlayer() is not None):
             self.getPlayer().setProprietaire(booleen)
         
@@ -92,6 +94,8 @@ class Petshop(object):
 
     def getListeAnimaux(self):
         "Méthode permettant de retourner la liste des animaux, contenue dans l'objet Petshop"
+        if (len(self._liste_animaux) == 0):
+            print("Vous n'avez pas d'animaux dans votre animalerie...")
         for animals in self._liste_animaux:
             for animal in self._liste_animaux[animals]:
                 animal.printInfo()
