@@ -137,7 +137,7 @@ class Petshop(object):
         "Méthode permettant de retourner le nombre de nourriture restante pour un animal donné"
         return self._dict_nourriture[animal]
 
-    def addNourritureParAnimal(self, animal):
+    def addNourritureParAnimal(self, animal, conso = 1):
         "Méthode permettant d'ajouter de la nourriture à un animal"
         self._dict_nourriture[animal] = self._dict_nourriture[animal] + 1;
 
