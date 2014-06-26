@@ -139,7 +139,7 @@ class Petshop(object):
 
     def addNourritureParAnimal(self, animal, conso = 1):
         "Méthode permettant d'ajouter de la nourriture à un animal"
-        self._dict_nourriture[animal] = self._dict_nourriture[animal] + 1;
+        self._dict_nourriture[animal] = self._dict_nourriture[animal] + conso;
 
     def rmNourritureParAnimal(self, animal):
         "Méthode permettant de supprimer de la nourriture à un animal"
