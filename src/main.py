@@ -165,7 +165,7 @@ def printInstructions():
 	print("\t --Faites attention à votre argent! Vous en avez besoin pour vivre. Aussi, vous avez droit à un découvert équivalent à votre somme de départ - si vous le dépassez, c'est foutu...")
 	print("\t --La livraison est de 3 crédits par animal, 2 crédits par crédit nourriture.\n\t1 animal -> 3 crédits | 10 et + -> 20 crédits\n\t1 crédit de nourriture -> 2 crédits | 6 et + -> 10 crédits")
 	print("\t --Des clients pourraient venir vous apporter de petits animaux abandonnés (so cuuute!) - attention à celà! Les prendre pourraient diminuer drastiquement votre stock de nourriture, mais ne pas les prendre pourraient faire que vos clients vous prennent pour un monstre, vous fasse une mauvaise pub et fasse fuir vos employés...")
-	print("\t --C'est bien d'avoir un beau magasin, et d'embaucher du personnel! Attention toutefois: plus vous avez d'animaux et plus de dégâts il y aura! Aussi, il se pourrai qu'un événement inattendu vienne vous causer du tord dans un tour (une tempête, une tornade, etc...). De plus, embauche beaucoup de personnel coûte, et ils ne seront pas content si jamais vous les payez tard...")
+	print("\t --C'est bien d'avoir un beau magasin, et d'embaucher du personnel! Attention toutefois: plus vous avez d'animaux et plus de dégâts il y aura! Aussi, il se pourrai qu'un événement inattendu vienne vous causer du tord dans un tour (une tempête, une tornade, etc...). De plus, embaucher beaucoup de personnel coûte, et ils ne seront pas content si jamais vous les payez tard...")
 	print("\n Alors, prêt à jouer? :-) C'est parti!")
 	print("\nPour avoir une liste des commandes pouvant être exécutées durant le jeu, tapez aide dans la console!\n")
 
@@ -370,7 +370,6 @@ if __name__ == "__main__":
 		consommationDeNourriture()
 
 		nbrTours = nbrTours+1;
-
 
 	##FIN DU JEU##
 
