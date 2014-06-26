@@ -21,7 +21,7 @@ liste_animaleries = []
 liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "contact"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
-achat_nourriture = []
+achat_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
 
 #Instanciation
 liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", "20", "15", 4500))
@@ -85,7 +85,9 @@ def paiementLivraisonAnimaux(player):
 def paiementLivraisonNourriture(player):
 	"""Méthode permettant de payer la livraison de la nourriture à l'animalerie -> Si 6 et plus de 6 crédits de nourriture, paiement de 10 crédits - sinon, 2 * le nombre de crédits de nourriture"""
 	global achat_nourriture
-	nbrNourriture = len(achat_nourriture)
+	nbrNourriture = 0
+	for animal in achat_nourriture:
+		nbrNourriture = nbrNourriture + achat_nourriture[animal]
 	if (nbrNourriture >= 6):
 		montant = 10
 	else:

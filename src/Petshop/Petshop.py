@@ -141,16 +141,16 @@ class Petshop(object):
         "Méthode permettant d'ajouter de la nourriture à un animal"
         self._dict_nourriture[animal] = self._dict_nourriture[animal] + conso;
 
-    def rmNourritureParAnimal(self, animal):
+    def rmNourritureParAnimal(self, animal, conso):
         "Méthode permettant de supprimer de la nourriture à un animal"
-        self._dict_nourriture[animal] = self._dict_nourriture[animal] - 1;
+        self._dict_nourriture[animal] = self._dict_nourriture[animal] - conso;
 
     def consommationDeNourriture(self):
         "Méthode permettant aux animaux présents dans l'animalerie de consommer de la nourriture -> Si plus de nourriture, diminution des points de vie!"
         for animals in self._liste_animaux.values():
             for animal in animals:
                 if self._dict_nourriture[animal.getRace()] > 0:
-                    self.rmNourritureParAnimal(animal.getConsommationUnite())
+                    self.rmNourritureParAnimal(animal.getRace(), animal.getConsommationUnite())
                 else:
                     animal.diminuerPtsDeVie(1)
                     print("Un animal de type", animal.getRace(), "n'a plus de nourriture...")
