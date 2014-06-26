@@ -65,6 +65,10 @@ def transfertCommande(player):
 		animalerie_choisie.addAnimal(animal)
 		print("Un",animal.getRace(),"vient d'être ajouté à votre stock!")
 	reinitAchatAnimaux()
+	for animal in achat_nourriture:
+		animalerie_choisie.addNourritureParAnimal(animal, achat_nourriture[animal])
+		print(achat_nourriture[animal],"unités de nourriture pour",animal,"vient d'être ajouté à votre stock!")
+	reinitAchatNourriture()
 	print("\n")
 
 def paiementLivraisonAnimaux(player):
@@ -103,6 +107,12 @@ def consommationDeNourriture():
 	"Méthode permettant aux animaux de l'animalerie de consommer de la nourriture"
 	global animalerie_choisie
 	animalerie_choisie.consommationDeNourriture()
+
+def reinitAchatNourriture():
+	"""Méthode permettant de réinitialiser la liste de nourriture achetée"""
+	global achat_nourriture
+	for animal in achat_nourriture:
+		achat_nourriture[animal] = 0
 
 def delAll():
 	"""Supprime les objets créés"""
@@ -225,8 +235,26 @@ def fun_acheter_animal(player):
 
 
 def fun_acheter_nourriture(player):
-	"""Fonction permettant d'acheter de la nourriture pour un type d'animal, ou plusieurs"""
-	print("Fonction non implantée encore...")
+	"""Fonction permettant d'acheter de la nourriture pour un type d'animal, ou plusieurs
+		-> Choisir animal
+		-> Choisir combien
+		-> 3 unités * le nombre de nourriture par animal
+	"""
+	global liste_animaux
+	global achat_nourriture
+	choixAnimal = ""
+	nbreNourriture = 0
+	print("Veuillez entrer l'espèce animale dont vous voulez acheter de la nourriture [Hamster, Perruche, Chien]: ")
+	while (choixAnimal not in liste_animaux):
+		choixAnimal = sys.stdin.readline().capitalize().strip()
+	print("Veuillez entrer le nombre de kgs de nourriture que vous voulez acheter pour cet animal: ")
+	nbreNourriture = int(input())
+	achat_nourriture[choixAnimal] = achat_nourriture[choixAnimal] + nbreNourriture
+	montantAchat = 3 * nbreNourriture
+	player.rmMontant(montantAchat)
+	print("\n")
+	print("Vous venez d'acheter",nbreNourriture,"unités de nourriture pour",choixAnimal,": ",montantAchat,".")
+	print("\n")
 
 #MAIN
 
@@ -271,6 +299,8 @@ if __name__ == "__main__":
 	liste_animaleries[choix_animalerie - 1].setProprietaire(True)
 
 	animalerie_choisie = liste_animaleries[choix_animalerie - 1]
+
+	player.rmMontant(animalerie_choisie.getPrix())
 
 	print("\nVous avez choisi l'animalerie", animalerie_choisie.getNom())
 
