@@ -14,4 +14,4 @@ N'hésitez pas à me contacter si vous avez des remarques à faire (antonin[dot]
 
 TODO:
 
-1.	Implémentation du main	
+1.	Implémentation du main (Achat des animaux par des clients factices)
