@@ -7,6 +7,7 @@ from Animals import Perruche
 from Animals import Dog
 from Petshop import Petshop
 from Player import Player
+from Player import Workman
 
 import sys
 import random
