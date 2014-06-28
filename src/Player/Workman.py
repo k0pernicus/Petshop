@@ -60,6 +60,10 @@ class Workman(Player.Player):
 		if (self.getQualifications() == "Expert"):
 			return 2100
 
+	def getPaye(self):
+		"""Fonction permettant de retourner la paye de l'embauché"""
+		return self._paye
+
 	def setPaye(self):
 		"""Fonction permettant de modifier dynamiquement la paye de l'embauché, en fonction de son expérience professionnelle"""
 		self._paye = self.getPaye()
