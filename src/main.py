@@ -309,19 +309,23 @@ def fun_embaucher_personnel():
 	"""Fonction permettant d'afficher toutes les informations utiles quant au personnel à embaucher"""
 	global personnel_a_embaucher
 	global animalerie_choisie
-	choixPersonnel = 0
-	print("Voici les candidats:\n")
-	print_personnel_a_embaucher()
-	while (choixPersonnel > len(personnel_a_embaucher) or choixPersonnel < 0):
-		choixPersonnel = int(input("Veuillez sélectionner la personne à embaucher [0 si nul]:"))
-	if (choixPersonnel == 0):
-		print("Vous n'avez embauché personne...")
+	choixPersonnel = -1
+	if len(personnel_a_embaucher) > 0:
+		print("Voici les candidats:\n")
+		print_personnel_a_embaucher()
+		while (choixPersonnel > len(personnel_a_embaucher) or choixPersonnel < 0):
+			choixPersonnel = int(input("Veuillez sélectionner la personne à embaucher [0 si nul]:"))
+		if (choixPersonnel == 0):
+			print("Vous n'avez embauché personne...")
+		else:
+			choixPersonnel = choixPersonnel - 1
+			setDateEmbauche(personnel_a_embaucher[choixPersonnel])
+			animalerie_choisie.addEmploye(personnel_a_embaucher[choixPersonnel])
+			print("Vous avez embauché",personnel_a_embaucher[choixPersonnel].getNom(),"!")
+			print("\n")
+			del(personnel_a_embaucher[choixPersonnel])
 	else:
-		choixPersonnel = choixPersonnel - 1
-		animalerie_choisie.addEmploye(personnel_a_embaucher[choixPersonnel])
-		print("Vous avez embauché",personnel_a_embaucher[choixPersonnel].getNom(),"!")
-		print("\n")
-		del(personnel_a_embaucher[choixPersonnel])
+		print("Il n'y a personne à embaucher!")
 
 #MAIN
 
