@@ -395,6 +395,9 @@ if __name__ == "__main__":
 		#Diminution des points de vie de chaque animal
 		diminuer_pts_de_vie(int(animalerie_choisie.getDegats()) / 10)
 
+		#Paiement des employés
+		paiementDesEmployes(player)
+
 		#Affichage des infos du joueur
 		printInfoJoueur(player)
 
