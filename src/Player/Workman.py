@@ -66,7 +66,15 @@ class Workman(Player.Player):
 
 	def setPaye(self):
 		"""Fonction permettant de modifier dynamiquement la paye de l'embauché, en fonction de son expérience professionnelle"""
-		self._paye = self.getPaye()
+		self._paye = self.calculPaye()
+
+	def getDateEmbauche(self):
+		"""Fonction permettant de retourner la date d'embauche de l'employé (le nombre de tour)"""
+		return self._date_embauche
+
+	def setDateEmbauche(self, date_embauche):
+		"""Fonction permettant de modifier la date d'embauche de l'employé"""
+		self._date_embauche = date_embauche
 
 	def printInfo(self):
 		"""Surcharge de la fonction printInfo()"""
