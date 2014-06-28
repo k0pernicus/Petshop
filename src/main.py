@@ -289,7 +289,7 @@ def fun_embaucher_personnel():
 	choixPersonnel = 0
 	print("Voici les candidats:\n")
 	print_personnel_a_embaucher()
-	while (choixPersonnel > len(personnel_a_embaucher) or choixPersonnel < 1):
+	while (choixPersonnel > len(personnel_a_embaucher) or choixPersonnel < 0):
 		choixPersonnel = int(input("Veuillez sélectionner la personne à embaucher [0 si nul]:"))
 	if (choixPersonnel == 0):
 		print("Vous n'avez embauché personne...")
