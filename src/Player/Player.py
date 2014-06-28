@@ -5,7 +5,7 @@
 class Player(object):
 	"Classe permettant d'instancier un objet Player, joueur principal du jeu \"PetShop\""
 
-	def __init__(self, nom, sexe, argent, proprietaire = False):
+	def __init__(self, nom, sexe, argent = 0, proprietaire = False):
 		"""Constructeur d'un objet Player, caractérisé par:
 			- son nom
 			- son sexe
