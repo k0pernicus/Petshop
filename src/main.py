@@ -31,6 +31,15 @@ liste_animaleries.append(Petshop.Petshop("Pattoune", "15", "15", 3700))
 liste_animaleries.append(Petshop.Petshop("Animalia", "15", "18", 3200))
 liste_animaleries.append(Petshop.Petshop("Hamsteragram", "12", "20", 2200))
 
+personnel_a_embaucher.append(Workman.Workman("Nadine", "42", "Maitre"))
+personnel_a_embaucher.append(Workman.Workman("Gérard", "53", "Medium"))
+personnel_a_embaucher.append(Workman.Workman("Xavier", "24", "Maitre"))
+personnel_a_embaucher.append(Workman.Workman("Laurent", "47", "Expert"))
+personnel_a_embaucher.append(Workman.Workman("Lucie", "21", "Novice"))
+personnel_a_embaucher.append(Workman.Workman("Lola", "20", "Novice"))
+personnel_a_embaucher.append(Workman.Workman("Maxime", "28", "Medium"))
+personnel_a_embaucher.append(Workman.Workman("Kyllian", "32", "Expert"))
+
 #Fonctions
 
 def sexeJoueurOk(sexe):
