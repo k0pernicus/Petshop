@@ -282,7 +282,7 @@ def fun_acheter_nourriture(player):
 	print("Vous venez d'acheter",nbreNourriture,"unités de nourriture pour",choixAnimal,": ",montantAchat,".")
 	print("\n")
 
-def fun_embaucher_personnel(player):
+def fun_embaucher_personnel():
 	"""Fonction permettant d'afficher toutes les informations utiles quant au personnel à embaucher"""
 	global personnel_a_embaucher
 	global animalerie_choisie
