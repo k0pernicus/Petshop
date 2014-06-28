@@ -48,8 +48,8 @@ class Workman(Player.Player):
 		"""Fonction permettant d'incrémenter le degré de satisfaction de l'employé"""
 		self._content = self._content + 1
 
-	def getPaye(self):
-		"""Fonction permettant de retourner la paye de l'embauché"""
+	def calculPaye(self):
+		"""Fonction permettant de (re)calculer la paye de l'embauché"""
 		if (self.getQualifications() == "Novice"):
 			return 1200
 		if (self.getQualifications() == "Medium"):
