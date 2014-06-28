@@ -296,7 +296,7 @@ def fun_embaucher_personnel():
 	else:
 		choixPersonnel = choixPersonnel - 1
 		animalerie_choisie.addEmploye(personnel_a_embaucher[choixPersonnel])
-		print("Vous avez embauché",personnel_a_embaucher[choixPersonnel],"!")
+		print("Vous avez embauché",personnel_a_embaucher[choixPersonnel].getNom(),"!")
 		print("\n")
 		del(personnel_a_embaucher[choixPersonnel])
 
