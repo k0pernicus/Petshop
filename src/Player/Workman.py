@@ -11,7 +11,8 @@ class Workman(Player.Player):
 		self._embauche = False;
 		self._content = 10;
 		self._qualifications = qualifications
-		self._paye = self.getPaye()
+		self._paye = self.calculPaye()
+		self._date_embauche = 0
 
 	def __del__(self):
 		"""Destructeur d'un objet Workman"""
