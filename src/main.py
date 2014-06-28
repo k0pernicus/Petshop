@@ -213,6 +213,18 @@ def print_info_banquaire(player):
 	print("Compte en banque du joueur: ", player.getMontant())
 	print("\n")
 
+def print_personnel_a_embaucher():
+	"""Fonction permettant d'afficher la liste du personnel à embaucher"""
+	print("======= DEBUT LISTE PERSONNEL =======")
+	print("\n")
+	i = 1
+	for candidat in personnel_a_embaucher:
+		print(i,":")
+		candidat.printInfo()
+		i = i + 1
+		print("\n")
+	print("======== FIN LISTE PERSONNEL ========")
+
 def print_contact():
 	"""Fonction permettant d'afficher les informations du développeur"""
 	print("\n")
