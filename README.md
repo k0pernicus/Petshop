@@ -15,3 +15,5 @@ N'hésitez pas à me contacter si vous avez des remarques à faire (antonin[dot]
 TODO:
 
 1.	Implémentation du main (Achat des animaux par des clients factices)
+2.	Implémentation de tests unitaires en Python
+3.	Implémentation GUI
