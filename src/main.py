@@ -335,7 +335,7 @@ if __name__ == "__main__":
 	printAnimaleries()
 
 	#Choix de la première animalerie
-	while (choix_animalerie > len(liste_animaleries) or choix_animalerie < 0):
+	while (choix_animalerie > len(liste_animaleries) or choix_animalerie < 1):
 		choix_animalerie = int(input("Veuillez choisir une animalerie:"))
 
 	#Le joueur devient propriétaire de l'animalerie qu'il a choisi
@@ -407,6 +407,9 @@ if __name__ == "__main__":
 
 		if (commande == "contact"):
 			print_contact()
+
+		if (commande == "embaucher_personnel"):
+			fun_embaucher_personnel()
 
 		consommationDeNourriture()
 
