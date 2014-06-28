@@ -49,6 +49,10 @@ class Player(object):
 		"""Méthode permettant d'enlever un montant de la somme totale du joueur"""
 		self._argent = self._argent - argent
 
+	def incrMontant(self, argent):
+		"""Méthode permettant d'ajouter un montant à la somme de l'objet Player"""
+		self._argent = self._argent + argent
+
 	def isEndette(self):
 		"""Méthode permettant de savoir si le personnage est endetté ou non"""
 		return self._endette
