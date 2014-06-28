@@ -133,6 +133,29 @@ def delAll():
 	for animalerie in liste_animaleries:
 		animalerie.__del__
 
+def paiementDesEmployes(player):
+	"""Fonction permettant de payer les employés, en fonction de leur date d'embauche"""
+	global nbrTours
+	global animalerie_choisie
+	#Pour tous les employés
+	for employe in animalerie_choisie.getListeEmployes():
+		#Si date anniversaire, on paye
+		if (employe.getDateEmbauche() == (nbrTours % 30)):
+			player.rmMontant(employe.getPaye())
+			#employe.incrMontant(employe.getPaye())
+			print("Employé",employe.getNom(),"payé!")
+		else:
+			print("Pas payé!!!!")
+	print("\n")
+
+def setDateEmbauche(employe):
+	"""Fonction permettant d'ajouter une date d'embauche dans un objet Workman"""
+	global nbrTours
+	nbrTours = nbrTours % 30
+	if nbrTours == 0:
+		nbrTours = 1
+	employe.setDateEmbauche(nbrTours)
+
 #Fonctions PRINT
 
 def printBienvenue():
