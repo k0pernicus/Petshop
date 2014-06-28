@@ -198,6 +198,7 @@ def print_aide():
 	print('\tinfo_banquaire:', 'affiche les informtions banquaires du joueur')
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
+	print('\tembaucher_personnel:', 'permet d\'embauche du personnel qualifié (ou pas...)')
 	print("\n")
 
 def print_info_animaux():
