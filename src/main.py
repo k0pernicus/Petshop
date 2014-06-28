@@ -281,6 +281,24 @@ def fun_acheter_nourriture(player):
 	print("Vous venez d'acheter",nbreNourriture,"unités de nourriture pour",choixAnimal,": ",montantAchat,".")
 	print("\n")
 
+def fun_embaucher_personnel(player):
+	"""Fonction permettant d'afficher toutes les informations utiles quant au personnel à embaucher"""
+	global personnel_a_embaucher
+	global animalerie_choisie
+	choixPersonnel = 0
+	print("Voici les candidats:\n")
+	print_personnel_a_embaucher()
+	while (choixPersonnel > len(personnel_a_embaucher) or choixPersonnel < 1):
+		choixPersonnel = int(input("Veuillez sélectionner la personne à embaucher [0 si nul]:"))
+	if (choixPersonnel == 0):
+		print("Vous n'avez embauché personne...")
+	else:
+		choixPersonnel = choixPersonnel - 1
+		animalerie_choisie.addEmploye(personnel_a_embaucher[choixPersonnel])
+		print("Vous avez embauché",personnel_a_embaucher[choixPersonnel],"!")
+		print("\n")
+		del(personnel_a_embaucher[choixPersonnel])
+
 #MAIN
 
 if __name__ == "__main__":
