@@ -161,9 +161,9 @@ class Petshop(object):
         "Méthode permettant de retourner le nombre de visites du magasin"
         return self._nbr_visites
 
-    def incrNbrVisites(self):
+    def addNbrVisites(self, nbr):
         "Méthode permettant d'incrémenter le nombre de visites du magasin"
-        self._nbr_visites = self._nbr_visites + 1
+        self._nbr_visites = self._nbr_visites + nbr
 
     def printInfo(self):
         "Méthode permettant d'afficher toutes les informations déjà données, sur un objet Petshop"
