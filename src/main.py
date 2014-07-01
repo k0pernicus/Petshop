@@ -455,7 +455,11 @@ if __name__ == "__main__":
 
 		print("Fin du tour", nbrTours,"\n")
 
+		animalerie_choisie.addNbrVisites(nbrVisitesParTour)
+
 		nbrTours = nbrTours+1;
+
+		nbrVisitesParTour = 0
 
 	##FIN DU JEU##
 
