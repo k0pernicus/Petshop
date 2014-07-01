@@ -30,6 +30,7 @@ class Petshop(object):
         self._liste_employes = []
         self._liste_animaux = {"Hamster": [], "Dog": [], "Perruche": []}
         self._dict_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
+        self._nbr_visites = 0
 
     def __del__(self):
         """Déconstructeur d'une animalerie"""
@@ -155,6 +156,14 @@ class Petshop(object):
                     animal.diminuerPtsDeVie(1)
                     print("Un animal de type", animal.getRace(), "n'a plus de nourriture...")
         print("\n")
+
+    def getNbrVisites(self):
+        "Méthode permettant de retourner le nombre de visites du magasin"
+        return self._nbr_visites
+
+    def incrNbrVisites(self):
+        "Méthode permettant d'incrémenter le nombre de visites du magasin"
+        self._nbr_visites = self._nbr_visites + 1
 
     def printInfo(self):
         "Méthode permettant d'afficher toutes les informations déjà données, sur un objet Petshop"
