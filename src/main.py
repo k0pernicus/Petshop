@@ -16,6 +16,7 @@ import random
 nomJoueur = ""
 sexeJoueur = ""
 nbrTours = 0
+nbrVisitesParTour = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
