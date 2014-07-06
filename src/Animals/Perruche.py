@@ -8,7 +8,7 @@ class Perruche(Animal.Animal):
     """Classe permettant d'instancier un objet représentation l'animal 'Perruche'"""
 
     def __init__(self, sexe):
-    	"""Constructeur d'un objet Hamster"""
+    	"""Constructeur d'un objet Perruche"""
     	Animal.Animal.__init__(self, "Perruche", 20, sexe, 2, 10)
 
     def __del__(self):
