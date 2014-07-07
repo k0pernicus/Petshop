@@ -15,7 +15,7 @@ import random
 #Paramètres généraux
 nomJoueur = ""
 sexeJoueur = ""
-nbrTours = 0
+nbrTours = 1
 nbrVisitesParTour = 0
 difficulte = ""
 choix_animalerie = -1
