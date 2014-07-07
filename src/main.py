@@ -449,10 +449,7 @@ if __name__ == "__main__":
 				fun_embaucher_personnel()
 
 			if (commande == "q"):
-				break
-
-		if (commande == "q"):
-			break;
+				break;
 
 		consommationDeNourriture()
 
