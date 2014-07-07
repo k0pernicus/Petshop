@@ -16,6 +16,7 @@ import random
 nomJoueur = ""
 sexeJoueur = ""
 nbrTours = 0
+nbrVisitesParTour = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
@@ -412,42 +413,56 @@ if __name__ == "__main__":
 		if (nbrTours != 0):
 			transfertCommande(player)
 
-		#Attente de la commande utilisateur
-		print("Commande:",)
+		commande = ""
 
-		commande = sys.stdin.readline().lower().strip()
+		#Tant que l'utilisateur n'a pas tapé "q", alors on continue sur le même tour
+		while commande != "q":
 
-		while (commande not in liste_cmd):
-			print("Mauvaise commande - veuillez réessayer")
+			#Attente de la commande utilisateur
+			print("Commande [q pour quitter]:")
+
 			commande = sys.stdin.readline().lower().strip()
 
-		if (commande == "aide"):
-			print_aide()
+			while (commande not in liste_cmd && commande != "q"):
+				print("Mauvaise commande - veuillez réessayer")
+				commande = sys.stdin.readline().lower().strip()
 
-		if (commande == "info_animaux"):
-			print_info_animaux()
+			if (commande == "aide"):
+				print_aide()
 
-		if (commande == "consulter_compte_banquaire"):
-			print_info_banquaire(player)
+			if (commande == "info_animaux"):
+				print_info_animaux()
 
-		if (commande == "acheter_animal"):
-			fun_acheter_animal(player)
+			if (commande == "consulter_compte_banquaire"):
+				print_info_banquaire(player)
 
-		if (commande == "acheter_nourriture"):
-			fun_acheter_nourriture(player)
+			if (commande == "acheter_animal"):
+				fun_acheter_animal(player)
 
-		if (commande == "contact"):
-			print_contact()
+			if (commande == "acheter_nourriture"):
+				fun_acheter_nourriture(player)
 
-		if (commande == "embaucher_personnel"):
-			fun_embaucher_personnel()
+			if (commande == "contact"):
+				print_contact()
+
+			if (commande == "embaucher_personnel"):
+				fun_embaucher_personnel()
+
+			if (commande == "q"):
+				break
 
 		if (commande == "q"):
 			break;
 
 		consommationDeNourriture()
 
+		print("Fin du tour", nbrTours,"\n")
+
+		animalerie_choisie.addNbrVisites(nbrVisitesParTour)
+
 		nbrTours = nbrTours+1;
+
+		nbrVisitesParTour = 0
 
 	##FIN DU JEU##
 
