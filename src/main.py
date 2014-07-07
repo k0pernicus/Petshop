@@ -423,7 +423,7 @@ if __name__ == "__main__":
 
 			commande = sys.stdin.readline().lower().strip()
 
-			while (commande not in liste_cmd && commande != "q"):
+			while (commande not in liste_cmd and commande != "q"):
 				print("Mauvaise commande - veuillez réessayer")
 				commande = sys.stdin.readline().lower().strip()
 
