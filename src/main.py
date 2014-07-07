@@ -413,10 +413,12 @@ if __name__ == "__main__":
 		if (nbrTours != 0):
 			transfertCommande(player)
 
+		nbrCommandes = 0
+
 		commande = ""
 
 		#Tant que l'utilisateur n'a pas tapé "q", alors on continue sur le même tour
-		while commande != "q":
+		while (commande != "q" and nbrCommandes < 5):
 
 			#Attente de la commande utilisateur
 			print("Commande [q pour quitter]:")
@@ -450,6 +452,9 @@ if __name__ == "__main__":
 
 			if (commande == "q"):
 				break
+
+			if (commande != "aide" and commande != "contact"):
+				nbrCommandes = nbrCommandes + 1
 
 		consommationDeNourriture()
 
