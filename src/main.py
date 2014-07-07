@@ -19,7 +19,7 @@ nbrTours = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
-liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "embaucher_personnel", "contact"]
+liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "embaucher_personnel", "contact", "q"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
 achat_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
@@ -441,6 +441,9 @@ if __name__ == "__main__":
 
 		if (commande == "embaucher_personnel"):
 			fun_embaucher_personnel()
+
+		if (commande == "q"):
+			break;
 
 		consommationDeNourriture()
 
