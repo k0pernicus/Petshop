@@ -7,7 +7,8 @@ import os
 
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from Animals import Animal
-from Player import Player
+from Person import Person
+from Person import Player
 
 class Petshop(object):
     "Classe permettant d'instancier une animalerie, contenue dans le dossier Petshop"

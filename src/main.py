@@ -6,8 +6,9 @@ from Animals import Hamster
 from Animals import Perruche
 from Animals import Dog
 from Petshop import Petshop
-from Player import Player
-from Player import Workman
+from Person import Person
+from Person import Player
+from Person import Workman
 
 import sys
 import random
@@ -280,7 +281,7 @@ def fun_acheter_animal(player):
 	player.rmMontant(animal.getPrixAchat())
 	achat_animaux.append(animal)
 	print("\n")
-	print("Vous venez d'acheter", animal.printInfo())
+	animal.printInfo()
 	print("\n")
 
 
@@ -297,13 +298,13 @@ def fun_acheter_nourriture(player):
 	print("Veuillez entrer l'espèce animale dont vous voulez acheter de la nourriture [Hamster, Perruche, Chien]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
-	print("Veuillez entrer le nombre de kgs de nourriture que vous voulez acheter pour cet animal: ")
+	print("Veuillez entrer le nombre de kilogrammes de nourriture que vous voulez acheter pour cet animal: ")
 	nbreNourriture = int(input())
 	achat_nourriture[choixAnimal] = achat_nourriture[choixAnimal] + nbreNourriture
 	montantAchat = 3 * nbreNourriture
 	player.rmMontant(montantAchat)
 	print("\n")
-	print("Vous venez d'acheter",nbreNourriture,"unités de nourriture pour",choixAnimal,": ",montantAchat,".")
+	print("Vous venez d'acheter",nbreNourriture,"kilogrammes de nourriture pour",choixAnimal,": ",montantAchat," unités.")
 	print("\n")
 
 def fun_embaucher_personnel():

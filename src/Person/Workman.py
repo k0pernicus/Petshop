@@ -2,12 +2,12 @@
 #Auteur: Carette Antonin
 #Classe permettant d'instancier un objet Workman, correspondant à un employé
 
-from Player import Player
+from Person import Person
 
-class Workman(Player.Player):
+class Workman(Person.Person):
 	"""Constructeur d'un objet Workman"""
 	def __init__(self, nom, sexe, qualifications):
-		Player.Player.__init__(self, nom, sexe, qualifications)
+		Person.Person.__init__(self, nom, sexe, 0)
 		self._embauche = False;
 		self._content = 10;
 		self._qualifications = qualifications
