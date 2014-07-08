@@ -9,7 +9,7 @@ class Workman(Person.Person):
 	def __init__(self, nom, sexe, qualifications):
 		Person.Person.__init__(self, nom, sexe, 0)
 		self._embauche = False;
-		self._content = 10;
+		self._content = 15;
 		self._qualifications = qualifications
 		self._paye = self.calculPaye()
 		self._date_embauche = 0
