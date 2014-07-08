@@ -310,6 +310,8 @@ def fun_acheter_nourriture(player):
 	print("Veuillez entrer le nombre de kilogrammes de nourriture que vous voulez acheter pour cet animal [0 pour annuler]:  ")
 	while (nbreNourriture <= -1):
 		nbreNourriture = int(input())
+	if nbreNourriture == 0:
+		return
 	achat_nourriture[choixAnimal] = achat_nourriture[choixAnimal] + nbreNourriture
 	montantAchat = 3 * nbreNourriture
 	player.rmMontant(montantAchat)
