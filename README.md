@@ -14,5 +14,5 @@ N'hésitez pas à me contacter si vous avez des remarques à faire (antonin[dot]
 
 TODO:
 
-1.	Implémentation du main (Soin apporté aux animaux, selon la qualification des vendeurs + Mécontentement + Météo + Réparations)
+1.	Implémentation du main (Soin apporté aux animaux, selon la qualification des vendeurs + Mécontentement + Météo)
 2.	Implémentation GUI
