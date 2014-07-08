@@ -47,7 +47,7 @@ class Workman(Person.Person):
 
 	def incrContent(self):
 		"""Fonction permettant d'incrémenter le degré de satisfaction de l'employé"""
-		self._content = self._content + 1
+		self._content = self._content + 2
 
 	def calculPaye(self):
 		"""Fonction permettant de (re)calculer la paye de l'embauché"""
