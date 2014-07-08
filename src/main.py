@@ -18,6 +18,7 @@ nomJoueur = ""
 sexeJoueur = ""
 nbrTours = 1
 nbrVisitesParTour = 0
+nbrVisiteurs = 0
 difficulte = ""
 choix_animalerie = -1
 liste_animaleries = []
@@ -342,6 +343,7 @@ if __name__ == "__main__":
 	global difficulte
 	global choix_animalerie
 	global liste_cmd
+	global nbrVisiteurs
 
 	#Affichage du message de bienvenue
 	printBienvenue()
@@ -457,9 +459,12 @@ if __name__ == "__main__":
 			if (commande != "aide" and commande != "contact"):
 				nbrCommandes = nbrCommandes + 1
 
+			#Après la vérification de la commande, on regarde si un acheteur ne pointe pas le bout de son nez...
+			fun_venue_visiteurs()
+
 		consommationDeNourriture()
 
-		print("Fin du tour", nbrTours,"\n")
+		print("Fin du tour", nbrTours,", vous avez eu", nbrVisiteurs,"dans la journée.\n")
 
 		animalerie_choisie.addNbrVisites(nbrVisitesParTour)
 
