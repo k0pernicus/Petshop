@@ -318,7 +318,8 @@ def fun_acheter_animal(player):
 	print("Veuillez entrer le nombre d'animaux de cette espèce que vous voulez acheter [0 pour annuler]: ")
 	while (nbrAchat <= -1):
 		nbrAchat = int(input())
-	for i in (0, nbrAchat):
+		print("nbrAchat", nbrAchat)
+	for i in range (0, nbrAchat):
 		alea = random.randrange(0,2,1)
 		if (alea == 0):
 			sexe = "Male"
@@ -328,7 +329,7 @@ def fun_acheter_animal(player):
 			animal = Hamster.Hamster(sexe)
 		if (choixAnimal == "Perruche"):
 			animal = Perruche.Perruche(sexe)
-		if (choixAnimal == "Dog"):
+		if (choixAnimal == "Chien"):
 			animal = Dog.Dog(sexe)
 		player.rmMontant(animal.getPrixAchat())
 		achat_animaux.append(animal)
