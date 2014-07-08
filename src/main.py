@@ -9,6 +9,7 @@ from Petshop import Petshop
 from Person import Person
 from Person import Player
 from Person import Workman
+from Person import Visitor
 
 import sys
 import random
