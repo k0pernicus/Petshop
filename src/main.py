@@ -168,8 +168,6 @@ def paiementDesEmployes(player):
 			#employe.incrMontant(employe.getPaye())
 			print("Employé",employe.getNom(),"payé!")
 			employe.incrContent()
-		else:
-			print("Pas payé!!!!")
 	print("\n")
 
 def checkEmployes():
