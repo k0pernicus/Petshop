@@ -355,6 +355,28 @@ def fun_embaucher_personnel():
 	else:
 		print("Il n'y a personne à embaucher!")
 
+def fun_reparer(player):
+	"""Fonction permettant de réparer quelques dégats de l'animalerie"""
+	global animalerie_choisie
+	global argentDepart
+	#(-argentDepart + 400) -> endetté + 400 de réparation minimum
+	if player.getMontant() > (-argentDepart + 400):
+		nbrDegats = -1
+		print("La réparation est de 400 crédits pour 2 dégats en moins.\nCombien voulez-vous réparer de dégats [0 pour annuler]?")
+		while nbrDegats < 0:
+			nbrDegats = int(input())
+			if (player.getMontant() - (nbrDegats * 400)) < (-argentDepart):
+				print("Vous ne pouvez pas payer pour autant de réparations...")
+				nbrDegats = -1  
+		print("Réparation de", nbrDegats,"dégats en cours...")
+		animalerie_choisie.setDegats(int(animalerie_choisie.getDegats()) - nbrDegats)
+		if animalerie_choisie.getDegats() < 0:
+			animalerie_choisie.setDegats(0)
+		player.rmMontant(nbrDegats * 400)
+		print("Réparation de votre animalerie effectuée!\n")
+	else:
+		print("Vous n'avez pas assez de crédits pour effectuer une réparation...\n")
+
 def fun_venue_visiteurs(player):
 	"""Fonction permettant de faire venir (ou non) un acheteur - à base d'aléatoire!"""
 	global animalerie_choisie
