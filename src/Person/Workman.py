@@ -12,6 +12,7 @@ class Workman(Person.Person):
 		self._content = 20;
 		self._qualifications = qualifications
 		self._paye = self.calculPaye()
+		self._soin = self.calculSoin()
 		self._date_embauche = 0
 
 	def __del__(self):
@@ -67,6 +68,25 @@ class Workman(Person.Person):
 	def setPaye(self):
 		"""Fonction permettant de modifier dynamiquement la paye de l'embauché, en fonction de son expérience professionnelle"""
 		self._paye = self.calculPaye()
+
+	def calculSoin(self):
+		"""Fonction permettant de (re)calculer le soin pouvant être apporté aux animaux"""
+		if (self.getQualifications() == "Novice"):
+			return 0.5
+		if (self.getQualifications() == "Medium"):
+			return 1
+		if (self.getQualifications() == "Maitre"):
+			return 1.5
+		if (self.getQualifications() == "Expert"):
+			return 2
+
+	def getSoin(self):
+		"""Fonction permettant de retourner le soin apporté aux animaux, par la personne embauchée"""
+		return self._soin
+
+	def setSoin(self):
+		"""Fonction permettant de modifier dynamiquement le soin apporté aux animaux, par la personne embauchée - en fonction de son expérience professionnelle"""
+		self._soin = self.calculSoin()
 
 	def getDateEmbauche(self):
 		"""Fonction permettant de retourner la date d'embauche de l'employé (le nombre de tour)"""
