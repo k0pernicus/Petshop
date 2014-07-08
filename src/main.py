@@ -307,8 +307,9 @@ def fun_acheter_nourriture(player):
 	print("Veuillez entrer l'espèce animale dont vous voulez acheter de la nourriture [Hamster, Perruche, Chien]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
-	print("Veuillez entrer le nombre de kilogrammes de nourriture que vous voulez acheter pour cet animal: ")
-	nbreNourriture = int(input())
+	print("Veuillez entrer le nombre de kilogrammes de nourriture que vous voulez acheter pour cet animal [0 pour annuler]:  ")
+	while (nbreNourriture <= -1):
+		nbreNourriture = int(input())
 	achat_nourriture[choixAnimal] = achat_nourriture[choixAnimal] + nbreNourriture
 	montantAchat = 3 * nbreNourriture
 	player.rmMontant(montantAchat)
