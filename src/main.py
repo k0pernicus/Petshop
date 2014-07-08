@@ -527,17 +527,17 @@ if __name__ == "__main__":
 			if (commande == "acheter_nourriture"):
 				fun_acheter_nourriture(player)
 
-			if (commande == "contact"):
-				print_contact()
-
 			if (commande == "embaucher_personnel"):
 				fun_embaucher_personnel()
 
-			if (commande == "q"):
-				break
+			if (commande == "reparer"):
+				fun_reparer(player)
 
 			if (commande != "aide" and commande != "contact"):
 				nbrCommandes = nbrCommandes + 1
+
+			if (commande == "q"):
+				break
 
 			#Après la vérification de la commande, on regarde si un acheteur ne pointe pas le bout de son nez...
 			fun_venue_visiteurs(player)
