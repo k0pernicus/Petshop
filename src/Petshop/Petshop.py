@@ -147,7 +147,7 @@ class Petshop(object):
             for animal in animals:
                 if (animal.isMort()):
                     animals.remove(animal)
-                    del animal
+                    animal.mort()
                     nbrMort = nbrMort+1
         return nbrMort
 
