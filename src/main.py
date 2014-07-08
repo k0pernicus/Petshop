@@ -121,6 +121,21 @@ def diminuer_pts_de_vie(pts):
 	global animalerie_choisie
 	animalerie_choisie.diminuerPtsDeVie(pts)
 
+def apport_soin_animaux(self):
+	"""Fonction permettant d'apporter un soin aux animaux, en fonction de la qualification de l'/des employé(s)"""
+	global animalerie_choisie
+	global nbrTours
+	if len(animalerie_choisie.getListeEmployes() or len(animalerie_choisie.getListeAnimaux())) == 0:
+		return
+	if nbrTours % 5 == 0:
+		max = 0
+		for employe in animalerie_choisie.getListeEmployes():
+			if employe.getSoin() > max:
+				max = employe.getSoin()
+		for animals in animalerie_choisie.getListeAnimaux().values():
+			for animal in animalerie_choisie.getListeAnimaux()[animals]:
+				animal.addPtsDeVie(max)
+
 def consommationDeNourriture():
 	"Méthode permettant aux animaux de l'animalerie de consommer de la nourriture"
 	global animalerie_choisie
