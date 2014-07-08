@@ -52,6 +52,10 @@ class Animal(object):
         "Méthode permettant de modifier les points de vie d'un objet Animal"
         self._pts_de_vie = pts_de_vie
 
+    def addPtsDeVie(self, pts_de_vie):
+        "Méthode permettant d'ajouter des points de vie à un objet Animal"
+        self._pts_de_vie = self._pts_de_vie + pts_de_vie
+
     def diminuerPtsDeVie(self, pts):
         "Méthode permettant de diminuer les points de vie d'un objet Animal"
         self._pts_de_vie = self._pts_de_vie - pts
