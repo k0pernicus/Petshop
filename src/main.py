@@ -248,7 +248,7 @@ def print_aide():
 	print('\tinfo_banquaire:', 'affiche les informtions banquaires du joueur')
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
-	print('\tembaucher_personnel:', 'permet d\'embauche du personnel qualifié (ou pas...)')
+	print('\tembaucher_personnel:', 'permet d\'embauche du personnel (qualifié ou non)')
 	print('\treparer:', 'permet de réparer quelques dégats de son animalerie')
 	print('\tq:', 'permet de passer un tour')
 	print("\n")
