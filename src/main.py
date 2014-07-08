@@ -516,6 +516,9 @@ if __name__ == "__main__":
 		#Paiement des employés
 		paiementDesEmployes(player)
 
+		#Check des employés contents/non-contents
+		checkEmployes()
+
 		#Affichage des infos du joueur
 		printInfoJoueur(player)
 
