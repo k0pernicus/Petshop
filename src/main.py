@@ -260,31 +260,37 @@ def print_contact():
 	print("Contact: antonin[dot]carette[at]gmail[dot]com")
 	print("\n")
 
+# Fonctions FUN -> Fonctions lourdes, avec achat, visites, etc... Très importantes pour la suite d'un tour!
+
 def fun_acheter_animal(player):
 	"""Fonction permettant d'acheter un animal, pour son animalerie"""
 	global liste_animaux
 	global animalerie_choisie
 	global achat_animaux
 	choixAnimal = ""
+	nbrAchat = -1
 	print("Veuillez entrer l'espèce animale que vous voulez choisir [Hamster, Perruche, Chien]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
-	alea = random.randrange(0,2,1)
-	if (alea == 0):
-		sexe = "Male"
-	else:
-		sexe = "Femelle"
-	if (choixAnimal ==  "Hamster"):
-		animal = Hamster.Hamster(sexe)
-	if (choixAnimal == "Perruche"):
-		animal = Perruche.Perruche(sexe)
-	if (choixAnimal == "Dog"):
-		animal = Dog.Dog(sexe)
-	player.rmMontant(animal.getPrixAchat())
-	achat_animaux.append(animal)
-	print("\n")
-	animal.printInfo()
-	print("\n")
+	while (nbrAchat <= -1):
+		nbrAchat = input("Combien voulez-vous en acheter? [0 pour annuler]")
+	for i in (0, nbrAchat):
+		alea = random.randrange(0,2,1)
+		if (alea == 0):
+			sexe = "Male"
+		else:
+			sexe = "Femelle"
+		if (choixAnimal ==  "Hamster"):
+			animal = Hamster.Hamster(sexe)
+		if (choixAnimal == "Perruche"):
+			animal = Perruche.Perruche(sexe)
+		if (choixAnimal == "Dog"):
+			animal = Dog.Dog(sexe)
+		player.rmMontant(animal.getPrixAchat())
+		achat_animaux.append(animal)
+		print("\n")
+		animal.printInfo()
+		print("\n")
 
 
 def fun_acheter_nourriture(player):
