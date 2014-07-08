@@ -258,6 +258,7 @@ def print_aide():
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
 	print('\tembaucher_personnel:', 'permet d\'embauche du personnel (qualifié ou non)')
+	print('\tvirer_personnel:', 'permet de virer du personnel, si vous en avez...')
 	print('\treparer:', 'permet de réparer quelques dégats de son animalerie')
 	print('\tq:', 'permet de passer un tour')
 	print("\n")
