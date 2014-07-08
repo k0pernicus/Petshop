@@ -21,6 +21,7 @@ nbrTours = 1
 nbrVisitesParTour = 0
 nbrVisiteurs = 0
 difficulte = ""
+argentDepart = 0
 choix_animalerie = -1
 liste_animaleries = []
 liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "embaucher_personnel", "contact", "q"]
