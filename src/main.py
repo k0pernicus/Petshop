@@ -244,12 +244,13 @@ def print_aide():
 	print("\n")
 	print('Liste des commandes:')
 	print('\taide:', 'affiche la liste des commandes du programme')
-	print('\tcontact:', 'affiche les informations concernant l\'auteur du jeu, et comment le contacter')
 	print('\tinfo_animaux:', 'affiche les informations concernant la liste des animaux achetés')
 	print('\tinfo_banquaire:', 'affiche les informtions banquaires du joueur')
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
 	print('\tembaucher_personnel:', 'permet d\'embauche du personnel qualifié (ou pas...)')
+	print('\treparer:', 'permet de réparer quelques dégats de son animalerie')
+	print('\tq:', 'permet de passer un tour')
 	print("\n")
 
 def print_info_animaux():
