@@ -277,13 +277,6 @@ def print_personnel_a_embaucher():
 		print("\n")
 	print("======== FIN LISTE PERSONNEL ========")
 
-def print_contact():
-	"""Fonction permettant d'afficher les informations du développeur"""
-	print("\n")
-	print("Développeur principal: Carette Antonin")
-	print("Contact: antonin[dot]carette[at]gmail[dot]com")
-	print("\n")
-
 # Fonctions FUN -> Fonctions lourdes, avec achat, visites, etc... Très importantes pour la suite d'un tour!
 
 def fun_acheter_animal(player):
