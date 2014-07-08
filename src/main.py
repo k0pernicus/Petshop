@@ -154,6 +154,14 @@ def paiementDesEmployes(player):
 			print("Pas payé!!!!")
 	print("\n")
 
+def checkEmployes():
+	"""Fonction permettant de mettre à jour la base de données des employés, et d'en faire démissionner si les conditions de travail ne leur plaise pas..."""
+	global animalerie_choisie
+	for employe in animalerie_choisie.getListeEmployes():
+		if employe.getContent() < 10:
+			animalerie_choisie.rmEmploye(employe)
+			print("L'employé",employe.getNom(),"a démissionné...")
+
 def setDateEmbauche(employe):
 	"""Fonction permettant d'ajouter une date d'embauche dans un objet Workman"""
 	global nbrTours
