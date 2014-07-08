@@ -132,9 +132,9 @@ class Petshop(object):
             #L'animalerie ne contient plus l'animal...
             self._liste_animaux[animal].remove(premier_animal)
             #On supprime l'animal définitivement du programme
-            del premier_animal
+            premier_animal.vendu()
         else:
-            print("Pas assez d'animaux d'espèce", animal,"en vente... Pensez à en racheter! ;-)\n")
+            print("\nPas assez d'animaux d'espèce", animal,"en vente... Pensez à en racheter! ;-)\n")
 
     def setListeAnimaux(self, listeDanimaux):
         "Méthode permettant de modifier toute la liste des animaux"
