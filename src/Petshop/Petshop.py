@@ -98,8 +98,12 @@ class Petshop(object):
         "Méthode permettant de virer / faire démissionner un employé"
         self._liste_employes.remove(employe)
 
-    def getListeAnimaux(self):
+    def returnListeAnimaux(self):
         "Méthode permettant de retourner la liste des animaux, contenue dans l'objet Petshop"
+        return self._liste_animaux
+
+    def getListeAnimaux(self):
+        "Méthode permettant d'imprimer la liste des animaux, contenue dans l'objet Petshop"
         if (len(self._liste_animaux) == 0):
             print("Vous n'avez pas d'animaux dans votre animalerie...")
         for animals in self._liste_animaux:
