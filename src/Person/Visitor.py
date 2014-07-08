@@ -4,6 +4,8 @@
 
 from Person import Person
 
+import random
+
 class Visitor(Person.Person):
 	"Classe permettant d'instancier un objet, étant un personnage permettant de visiter l'animalerie, donner son avis sur celle-ci et acheter des animaux"
 
