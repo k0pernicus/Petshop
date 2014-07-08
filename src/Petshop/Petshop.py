@@ -122,6 +122,8 @@ class Petshop(object):
         "Méthode permettant de retourner le premier élément de l'espèce animale demandée"
         if self.getNbrSpecificAnimal(animal) > 0:
             return self._liste_animaux[animal][0]
+        else:
+            return "None"
 
     def delAnimal(self, animal):
         "Méthode permettant de supprimer le premier élément de l'espèce animale demandée dans la liste de l'animalerie - utile si vente d'un animal"
