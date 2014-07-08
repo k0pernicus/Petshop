@@ -364,6 +364,33 @@ def fun_embaucher_personnel():
 	else:
 		print("Il n'y a personne à embaucher!")
 
+def fun_virer_personnel(player):
+	"""Fonction permettant de virer du personnel"""
+	global animalerie_choisie
+	choixPersonnel = ""
+	while choixPersonnel != "Oui" and choixPersonnel != "Non":
+		print("Virer du personnel est très mal vu... De plus, vous allez devoir payer deux fois le salaire de la personne que vous allez virer. Êtes-vous certain de faire celà...? [oui/non]")
+		choixPersonnel = sys.stdin.readline().capitalize().strip()
+	if choixPersonnel == "Non":
+		return
+	print("Veuillez choisir la personne à virer dans la liste ci-dessous:")
+	cpt = 1
+	for employe in animalerie_choisie.getListeEmployes():
+		print(cpt,":")
+		employe.printInfo()
+		print("\n")
+		cpt = cpt + 1
+	nbrPersonnel = -1
+	while nbrPersonnel <= 0 or nbrPersonnel > len(animalerie_choisie.getListeEmployes()):
+		print("Numéro de l'employé à virer:")
+		nbrPersonnel = int(input())
+	employeVire = animalerie_choisie.getListeEmployes()[nbrPersonnel]
+	print("Vous avez choisi de virer", employeVire.getNom())
+	aDebiter = employeVire.getPaye() * 2
+	print("Votre compte va être débité de", aDebiter,"au profit de",employeVire.getNom())
+	player.rmMontant(aDebiter)
+	animalerie_choisie.rmEmploye(employeVire)
+
 def fun_reparer(player):
 	"""Fonction permettant de réparer quelques dégats de l'animalerie"""
 	global animalerie_choisie
