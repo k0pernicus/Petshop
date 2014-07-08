@@ -367,6 +367,9 @@ def fun_embaucher_personnel():
 def fun_virer_personnel(player):
 	"""Fonction permettant de virer du personnel"""
 	global animalerie_choisie
+	if len(animalerie_choisie.getListeEmployes()) == 0:
+		print("Vous n'avez pas de personnel à virer...")
+		return
 	choixPersonnel = ""
 	while choixPersonnel != "Oui" and choixPersonnel != "Non":
 		print("Virer du personnel est très mal vu... De plus, vous allez devoir payer deux fois le salaire de la personne que vous allez virer. Êtes-vous certain de faire celà...? [oui/non]")
