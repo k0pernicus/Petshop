@@ -16,7 +16,7 @@ class Workman(Person.Person):
 
 	def __del__(self):
 		"""Destructeur d'un objet Workman"""
-		Player.Player.__del__(self)
+		Person.Person.__del__(self)
 
 	def getEmbauche(self):
 		"""Fonction permettant de savoir si l'employé sur lequel on invoque la méthode est embauché ou non"""
