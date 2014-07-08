@@ -388,7 +388,7 @@ def fun_virer_personnel(player):
 	while nbrPersonnel <= 0 or nbrPersonnel > len(animalerie_choisie.getListeEmployes()):
 		print("Numéro de l'employé à virer:")
 		nbrPersonnel = int(input())
-	employeVire = animalerie_choisie.getListeEmployes()[nbrPersonnel]
+	employeVire = animalerie_choisie.getListeEmployes()[nbrPersonnel - 1]
 	print("Vous avez choisi de virer", employeVire.getNom())
 	aDebiter = employeVire.getPaye() * 2
 	print("Votre compte va être débité de", aDebiter,"au profit de",employeVire.getNom())
