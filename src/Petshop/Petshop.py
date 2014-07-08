@@ -94,6 +94,10 @@ class Petshop(object):
         "Méthode permettant d'ajouter dans la liste d'employés de l'animalerie un objet 'Player' donné"
         self._liste_employes.append(employe)
 
+    def rmEmploye(self, employe):
+        "Méthode permettant de virer / faire démissionner un employé"
+        self._liste_employes.remove(employe)
+
     def getListeAnimaux(self):
         "Méthode permettant de retourner la liste des animaux, contenue dans l'objet Petshop"
         if (len(self._liste_animaux) == 0):
