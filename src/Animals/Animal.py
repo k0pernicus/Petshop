@@ -23,7 +23,18 @@ class Animal(object):
         self._tps_gestation = 0
 
     def __del__(self):
+        "Déconstructeur d'un objet Animal"
+        return
+
+    def vendu(self):
+        "Méthode de vente d'un animal"
+        print("Un", self.getRace(),"a été vendu!")
+        del self
+
+    def mort(self):
+        "Méthode de décès d'un animal"
         print("Un",self.getRace(),"est mort...")
+        del self
 
     def getRace(self):
         "Méthode permettant de retourner la race de l'objet Animal"
