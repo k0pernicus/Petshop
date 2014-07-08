@@ -499,7 +499,7 @@ if __name__ == "__main__":
 				nbrCommandes = nbrCommandes + 1
 
 			#Après la vérification de la commande, on regarde si un acheteur ne pointe pas le bout de son nez...
-			fun_venue_visiteurs()
+			fun_venue_visiteurs(player)
 
 		consommationDeNourriture()
 
