@@ -569,6 +569,9 @@ if __name__ == "__main__":
 			if (commande == "embaucher_personnel"):
 				fun_embaucher_personnel()
 
+			if (commande == "virer_personnel"):
+				fun_virer_personnel(player)
+
 			if (commande == "reparer"):
 				fun_reparer(player)
 
