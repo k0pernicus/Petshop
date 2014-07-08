@@ -272,8 +272,9 @@ def fun_acheter_animal(player):
 	print("Veuillez entrer l'espèce animale que vous voulez choisir [Hamster, Perruche, Chien]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
+	print("Veuillez entrer le nombre d'animaux de cette espèce que vous voulez acheter [0 pour annuler]: ")
 	while (nbrAchat <= -1):
-		nbrAchat = input("Combien voulez-vous en acheter? [0 pour annuler]")
+		nbrAchat = int(input())
 	for i in (0, nbrAchat):
 		alea = random.randrange(0,2,1)
 		if (alea == 0):
