@@ -418,6 +418,8 @@ if __name__ == "__main__":
 
 		nbrCommandes = 0
 
+		nbrVisiteurs = 0
+
 		commande = ""
 
 		#Tant que l'utilisateur n'a pas tapé "q", alors on continue sur le même tour
