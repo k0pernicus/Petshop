@@ -149,6 +149,7 @@ def paiementDesEmployes(player):
 			player.rmMontant(employe.getPaye())
 			#employe.incrMontant(employe.getPaye())
 			print("Employé",employe.getNom(),"payé!")
+			employe.incrContent()
 		else:
 			print("Pas payé!!!!")
 	print("\n")
