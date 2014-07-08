@@ -337,31 +337,35 @@ def fun_embaucher_personnel():
 	else:
 		print("Il n'y a personne à embaucher!")
 
-def fun_venue_acheteur(joueur):
+def fun_venue_visiteurs(player):
 	"""Fonction permettant de faire venir (ou non) un acheteur - à base d'aléatoire!"""
 	global animalerie_choisie
 	global liste_animaux
 	global nbrVisiteurs
-	nbrCreationVisiteurs = random.randrange(0,5,1)
-	if nbrCreationVisiteurs == 0:
-		return
-	#Pour le nombre donné précédemment, on va créer une instance de Visitor
-	for i in range (0,nbrCreationVisiteurs):
-		visiteur_actuel = Visitor.Visitor.__init__()
-		nbrVisiteurs = nbrVisiteurs + 1
-		#Variable permettant de savoir si l'acheteur est intéressé pour acheter ou non
-		interesse_pour_acheter = getInteretPourVisiteur()
-		if interesse_pour_acheter == 0:
-			print("Acheteur non interessé pour acheter...")
+	if animalerie_choisie.getNbrAnimaux() > 0:
+		nbrCreationVisiteurs = random.randrange(0,5,1)
+		if nbrCreationVisiteurs == 0:
 			return
-		#Interessé -> on poursuit en choisissant un animal
-		animal_choisi = liste_animaux[random.randrange(0,2,1)]
-		#On choisi le premier animal de la liste
-		animal = animalerie_choisie.returnAnimal(animal_choisi)
-		#On paie le joueur...
-		joueur.incrMontant(animal.getPrixVente())
-		#On vend l'animal définitivement (voir doc de delAnimal dans Petshop)
-		animalerie_choisie.delAnimal(animal_choisi)
+		#Pour le nombre donné précédemment, on va créer une instance de Visitor
+		for i in range (0,nbrCreationVisiteurs):
+			visiteur_actuel = Visitor.Visitor()
+			nbrVisiteurs = nbrVisiteurs + 1
+			#Variable permettant de savoir si l'acheteur est intéressé pour acheter ou non
+			interesse_pour_acheter = getInteretPourVisiteur()
+			if interesse_pour_acheter == 0:
+				print("\nAcheteur non interessé pour acheter...\n")
+				return
+			#Interessé -> on poursuit en choisissant un animal
+			animal_choisi = liste_animaux[random.randrange(0,2,1)]
+			#On choisi le premier animal de la liste
+			animal = animalerie_choisie.returnAnimal(animal_choisi)
+			#On paie le joueur, s'il a bien l'animal demandé...
+			if animal != "None":
+				player.incrMontant(animal.getPrixVente())
+				#On vend l'animal définitivement (voir doc de delAnimal dans Petshop)
+				animalerie_choisie.delAnimal(animal_choisi)
+			else:
+				print("\nUn acheteur voulait un(e)", animal_choisi,", mais vous n'en aviez pas... :-/\n")
 
 #MAIN
 
