@@ -118,6 +118,22 @@ class Petshop(object):
         "Méthode permettant d'ajouter à la liste des animaux, un animal (donné en paramètre)"
         self._liste_animaux[animal.getRace()].append(animal)
 
+    def returnAnimal(self, animal):
+        "Méthode permettant de retourner le premier élément de l'espèce animale demandée"
+        if self.getNbrSpecificAnimal(animal) > 0:
+            return self._liste_animaux[animal][0]
+
+    def delAnimal(self, animal):
+        "Méthode permettant de supprimer le premier élément de l'espèce animale demandée dans la liste de l'animalerie - utile si vente d'un animal"
+        if self.getNbrSpecificAnimal(animal) > 0:
+            premier_animal = self._liste_animaux[animal][0]
+            #L'animalerie ne contient plus l'animal...
+            self._liste_animaux[animal].remove(premier_animal)
+            #On supprime l'animal définitivement du programme
+            del premier_animal
+        else:
+            print("Pas assez d'animaux d'espèce", animal,"en vente... Pensez à en racheter! ;-)\n")
+
     def setListeAnimaux(self, listeDanimaux):
         "Méthode permettant de modifier toute la liste des animaux"
         self._liste_animaux[listeDanimaux[0].getRace()] = listeDanimaux
