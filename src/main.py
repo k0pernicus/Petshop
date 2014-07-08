@@ -421,6 +421,7 @@ if __name__ == "__main__":
 	global choix_animalerie
 	global liste_cmd
 	global nbrVisiteurs
+	global argentDepart
 
 	#Affichage du message de bienvenue
 	printBienvenue()
