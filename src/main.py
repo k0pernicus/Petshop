@@ -233,7 +233,6 @@ def print_info_animaux():
 	global animalerie_choisie
 	print("\n")
 	animalerie_choisie.getListeAnimaux()
-	print("\n")
 
 def print_info_banquaire(player):
 	"""Fonction permettant d'afficher une sortie du compte en banque du joueur"""
@@ -289,10 +288,7 @@ def fun_acheter_animal(player):
 			animal = Dog.Dog(sexe)
 		player.rmMontant(animal.getPrixAchat())
 		achat_animaux.append(animal)
-		print("\n")
 		animal.printInfo()
-		print("\n")
-
 
 def fun_acheter_nourriture(player):
 	"""Fonction permettant d'acheter de la nourriture pour un type d'animal, ou plusieurs
