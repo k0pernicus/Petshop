@@ -110,6 +110,10 @@ class Petshop(object):
                 nbrAnimaux = nbrAnimaux + 1
         return nbrAnimaux
 
+    def getNbrSpecificAnimal(self, animal):
+        "Méthode permettant de retourner le nombre d'animaux restants, pour une race donnée en paramètre"
+        return self._liste_animaux[animal]
+
     def addAnimal(self, animal):
         "Méthode permettant d'ajouter à la liste des animaux, un animal (donné en paramètre)"
         self._liste_animaux[animal.getRace()].append(animal)
