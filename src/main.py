@@ -532,6 +532,9 @@ if __name__ == "__main__":
 		#Diminution des points de vie de chaque animal
 		diminuer_pts_de_vie(int(animalerie_choisie.getDegats()) / 10)
 
+		#Apport de soins par les employés, tous les 5 tours
+		apport_soin_animaux()
+
 		#Paiement des employés
 		paiementDesEmployes(player)
 
