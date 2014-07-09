@@ -2,6 +2,8 @@
 #Auteur: Carette Antonin
 #Classe permettant d'instancier un animal
 
+import random
+
 class Animal(object):
     "Classe permettant d'instancier un animal"
 
@@ -128,6 +130,17 @@ class Animal(object):
         "Méthode permettant de retourner le temps de gestation de l'objet Animal"
         if self.getEnceinte():
             return self._tps_gestation
+
+    def metBas(self, animalerie):
+        "Méthode permettant à l'animal de mettre bas - ajout d'un animal dans l'animalerie concernée"
+        alea = random.randrange(0,2,1)
+        if (alea == 0):
+            sexe = "Male"
+        else:
+            sexe = "Femelle"
+        nouveauNe = Animal.Animal(self.getRace(), self.getPtsDeVieMax(), sexe, self.getPrixAchat(), self.getPrixVente())
+        animalerie.addAnimal(nouveauNe)
+        self.setEnceinte()
 
     def printInfo(self):
         "Méthode permettant d'afficher toutes les informations déjà données, d'un objet Animal"
