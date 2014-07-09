@@ -28,12 +28,14 @@ liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
 achat_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
 personnel_a_embaucher = []
+#Liste de tours représentant les jours de chaleur - pour la reproduction des animaux
+joursDeChaleur = [4,14,17,23,29]
 
 #Instanciation
-liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", "20", "15", 4500))
-liste_animaleries.append(Petshop.Petshop("Pattoune", "15", "15", 3700))
-liste_animaleries.append(Petshop.Petshop("Animalia", "15", "18", 3200))
-liste_animaleries.append(Petshop.Petshop("Hamsteragram", "12", "20", 2200))
+liste_animaleries.append(Petshop.Petshop("A Rebrousse Poil", 20, 15, 4500))
+liste_animaleries.append(Petshop.Petshop("Pattoune", 15, 15, 3700))
+liste_animaleries.append(Petshop.Petshop("Animalia", 15, 18, 3200))
+liste_animaleries.append(Petshop.Petshop("Hamsteragram", 12, 20, 2200))
 
 personnel_a_embaucher.append(Workman.Workman("Nadine", "42", "Maitre"))
 personnel_a_embaucher.append(Workman.Workman("Gérard", "53", "Medium"))
