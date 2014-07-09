@@ -389,7 +389,7 @@ def fun_acheter_nourriture(player):
 	global liste_animaux
 	global achat_nourriture
 	choixAnimal = ""
-	nbreNourriture = 0
+	nbreNourriture = -1
 	print("Veuillez entrer l'espèce animale dont vous voulez acheter de la nourriture [Hamster, Perruche, Chien]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
