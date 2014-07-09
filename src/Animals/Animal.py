@@ -141,8 +141,9 @@ class Animal(object):
             sexe = "Male"
         else:
             sexe = "Femelle"
-        nouveauNe = Animal.Animal(self.getRace(), self.getPtsDeVieMax(), sexe, self.getPrixAchat(), self.getPrixVente())
+        nouveauNe = Animal(self.getRace(), self.getPtsDeVieMax(), sexe, self.getTpsGestation(), self.getPrixAchat(), self.getPrixVente())
         animalerie.addAnimal(nouveauNe)
+        print("Un animal a mit bas! Un nouvel",nouveauNe.getRace(),"est né!\n")
         self.setEnceinte()
 
     def printInfo(self):
