@@ -209,6 +209,50 @@ def getInteretPourVisiteur():
 		print("Votre animalerie est en très mauvais état... Il va falloir la réparer!!\n")
 		return 0
 
+def addReproduction():
+	"""Fonction permettant de faire reproduire deux animaux de meme race, s'ils sont de sexes différents (obviously...)"""
+	global animalerie_choisie
+	global joursDeChaleur
+	global nbrTours
+	liste_animaux = animalerie_choisie.returnListeAnimaux()
+	if len(liste_animaux) == 0:
+		return
+	else:
+		if (nbrTours % 30) in joursDeChaleur: 
+			sexeFemelle = False
+			animalFemelle = None
+			sexeMale = False
+			for animals in liste_animaux.values():
+				for animal in animals:
+					if animal.getSexe() == "Femelle" and animal.getEnceinte() != True:
+						sexeFemelle = True
+						animalFemelle = animal
+					else:
+						sexeMale = True
+				if sexeFemelle == True and sexeMale == True:
+					animalFemelle.setEnceinte()
+					print("Un animal de race", animalFemelle.getRace(),"est enceinte!\n")
+
+def surveillanceMiseABase():
+	"""Fonction permettant de surveiller si un animal va mettre à bas ou non..."""
+	global animalerie_choisie
+	decTpsGestationGlobal()
+	liste_animaux = animalerie_choisie.returnListeAnimaux()
+	for animals in liste_animaux.values():
+		for animal in animals:
+			if animal.getEnceinte():
+				if animal.getTpsGestation() <= 0:
+					animal.metBas(animalerie_choisie)
+				else:
+					print("Temps de gestation pour un animal de race", animal.getRace(),":",animal.getTpsGestation())
+
+def decTpsGestationGlobal():
+	"""Fonction permettant de décrémenter le temps de gestation pour tous les animaux présents dans l'animalerie"""
+	global animalerie_choisie
+	liste_animaux = animalerie_choisie.returnListeAnimaux()
+	for animals in liste_animaux.values():
+		for animal in animals:
+			animal.decTpsGestation()
 
 #Fonctions PRINT
 
