@@ -106,8 +106,8 @@ class Petshop(object):
         "Méthode permettant d'imprimer la liste des animaux, contenue dans l'objet Petshop"
         if (len(self._liste_animaux) == 0):
             print("Vous n'avez pas d'animaux dans votre animalerie...")
-        for animals in self._liste_animaux:
-            for animal in self._liste_animaux[animals]:
+        for animals in self._liste_animaux.values():
+            for animal in animals:
                 animal.printInfo()
 
     def getNbrAnimaux(self):
