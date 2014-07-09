@@ -582,6 +582,9 @@ if __name__ == "__main__":
 		#Apport de soins par les employés, tous les 5 tours
 		apport_soin_animaux()
 
+		#Surveillance de la mise à bas des animaux
+		surveillanceMiseABase()
+
 		#Paiement des employés
 		paiementDesEmployes(player)
 
@@ -656,6 +659,8 @@ if __name__ == "__main__":
 			fun_venue_visiteurs(player)
 
 		consommationDeNourriture()
+
+		addReproduction()
 
 		print("Fin du tour", nbrTours,", vous avez eu", nbrVisiteurs,"visiteurs dans la journée.\n")
 
