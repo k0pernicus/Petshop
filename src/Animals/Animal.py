@@ -8,7 +8,7 @@ class Animal(object):
     "Classe permettant d'instancier un animal"
 
     #Constructeur d'un objet Animal
-    def __init__(self, race, pts_de_vie, sexe, prixAchat, prixVente):
+    def __init__(self, race, pts_de_vie, sexe, tpsGestation, prixAchat, prixVente):
         """Constructeur d'un animal, caractérisé par:
             -ses points de vie,
             -son sexe
@@ -22,7 +22,8 @@ class Animal(object):
         self._enceinte = False
         #Chaque animal consomme, par défaut, une unité de nourriture
         self._consommationUnite = 1
-        self._tps_gestation = 0
+        self._tps_gestation_initial = tpsGestation
+        self._tps_gestation = tpsGestation
 
     def __del__(self):
         "Déconstructeur d'un objet Animal"
@@ -122,9 +123,11 @@ class Animal(object):
         if self.getEnceinte():
             if self._tps_gestation > 0:
                 self._tps_gestation = self._tps_gestation - 1
-            else: 
-                print("Un animal va mettre bas...")
 
+    def getTpsGestationInitial(self):
+        "Méthode permettant de retourner le temps de gestation initial de l'objet Animal"
+        if self.getEnceinte():
+            return self._tps_gestation_initial
 
     def getTpsGestation(self):
         "Méthode permettant de retourner le temps de gestation de l'objet Animal"
