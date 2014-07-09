@@ -9,7 +9,7 @@ class Perruche(Animal.Animal):
 
     def __init__(self, sexe):
     	"""Constructeur d'un objet Perruche"""
-    	Animal.Animal.__init__(self, "Perruche", 20, sexe, 2, 10)
+    	Animal.Animal.__init__(self, "Perruche", 20, sexe, 10, 2, 10)
 
     def __del__(self):
     	"""Destructeur d'un objet Perruche"""
