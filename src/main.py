@@ -545,6 +545,8 @@ if __name__ == "__main__":
 	#Création du joueur
 	player = Player.Player(nomJoueur, sexeJoueur, argentDepart, False)
 
+	print("Vous partez avec une mise de",argentDepart,"unités!\n")
+
 	#Affichage des animaleries
 	printAnimaleries()
 
