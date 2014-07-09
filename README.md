@@ -14,5 +14,5 @@ N'hésitez pas à me contacter si vous avez des remarques à faire (antonin[dot]
 
 TODO:
 
-1.	Implémentation du main (Météo)
+1.	Implémentation du main (Météo, don d'animaux par les visiteurs?)
 2.	Implémentation GUI
