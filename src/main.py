@@ -18,7 +18,6 @@ import random
 nomJoueur = ""
 sexeJoueur = ""
 nbrTours = 1
-nbrVisitesParTour = 0
 nbrVisiteurs = 0
 difficulte = ""
 argentDepart = 0
@@ -614,11 +613,11 @@ if __name__ == "__main__":
 
 		print("Fin du tour", nbrTours,", vous avez eu", nbrVisiteurs,"visiteurs dans la journée.\n")
 
-		animalerie_choisie.addNbrVisites(nbrVisitesParTour)
+		animalerie_choisie.addNbrVisites(nbrVisiteurs)
 
 		nbrTours = nbrTours+1;
 
-		nbrVisitesParTour = 0
+		nbrVisiteurs = 0
 
 	##FIN DU JEU##
 
