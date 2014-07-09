@@ -652,11 +652,7 @@ if __name__ == "__main__":
 			if (commande != "aide" and commande != "contact"):
 				nbrCommandes = nbrCommandes + 1
 
-			if (commande == "q"):
-				break
-
-			#Après la vérification de la commande, on regarde si un acheteur ne pointe pas le bout de son nez...
-			fun_venue_visiteurs(player)
+		fun_venue_visiteurs(player)
 
 		consommationDeNourriture()
 
