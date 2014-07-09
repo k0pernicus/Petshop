@@ -566,8 +566,10 @@ if __name__ == "__main__":
 		#Tant que l'utilisateur n'a pas tapé "q", alors on continue sur le même tour
 		while (commande != "q" and nbrCommandes < 5):
 
+			commandesRestantes = 5 - nbrCommandes
+
 			#Attente de la commande utilisateur
-			print("Commande [q pour quitter]:")
+			print("Commande [q pour quitter -",commandesRestantes,"commandes restantes]:")
 
 			commande = sys.stdin.readline().lower().strip()
 
