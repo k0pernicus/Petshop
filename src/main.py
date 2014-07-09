@@ -612,7 +612,7 @@ if __name__ == "__main__":
 
 		consommationDeNourriture()
 
-		print("Fin du tour", nbrTours,", vous avez eu", nbrVisiteurs,"dans la journée.\n")
+		print("Fin du tour", nbrTours,", vous avez eu", nbrVisiteurs,"visiteurs dans la journée.\n")
 
 		animalerie_choisie.addNbrVisites(nbrVisitesParTour)
 
