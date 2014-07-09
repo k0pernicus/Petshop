@@ -9,7 +9,7 @@ class Hamster(Animal.Animal):
 
     def __init__(self, sexe):
     	"""Constructeur d'un objet Hamster"""
-    	Animal.Animal.__init__(self, "Hamster", 30, sexe, 5, 10)
+    	Animal.Animal.__init__(self, "Hamster", 30, sexe, 15, 5, 10)
 
     def __del__(self):
     	"""Destructeur d'un objet Hamster"""
