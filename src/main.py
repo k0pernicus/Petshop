@@ -192,17 +192,14 @@ def getInteretPourVisiteur():
 	global animalerie_choisie
 	#Calcul de la moyenne de contentement, chez les ouvriers
 	liste_employes = animalerie_choisie.getListeEmployes()
-	taux_contentement = 0;
-	for employe in liste_employes:
-		taux_contentement = taux_contentement + employe.getContent()
-	taux_contentement = taux_contentement / len(liste_employes)
-	if taux_contentement >= 15:
-		return 1
-	if taux_contentement >= 10:
-		return random.randrange(0,1,1)
-	else:
-		print("Vos employés ne sont pas contents... Ils font fuir les clients!!\n")
-		if animalerie_choisie.getDegats() <= 20:
+	if len(liste_employes) > 0:
+		taux_contentement = 0;
+		for employe in liste_employes:
+			taux_contentement = taux_contentement + employe.getContent()
+		taux_contentement = taux_contentement / len(liste_employes)
+		if taux_contentement >= 15:
+			return 1
+		if taux_contentement >= 10:
 			return random.randrange(0,1,1)
 		else:
 			print("Votre animalerie est en très mauvais état... Il va falloir la réparer!!\n")
