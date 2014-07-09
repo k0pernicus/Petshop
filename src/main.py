@@ -202,9 +202,12 @@ def getInteretPourVisiteur():
 		if taux_contentement >= 10:
 			return random.randrange(0,1,1)
 		else:
-			print("Votre animalerie est en très mauvais état... Il va falloir la réparer!!\n")
-			return 0
-
+			print("Vos employés ne sont pas contents... Ils font fuir les clients!!\n")
+	if animalerie_choisie.getDegats() <= 20:
+		return random.randrange(0,1,1)
+	else:
+		print("Votre animalerie est en très mauvais état... Il va falloir la réparer!!\n")
+		return 0
 
 
 #Fonctions PRINT
