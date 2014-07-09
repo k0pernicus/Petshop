@@ -203,7 +203,7 @@ def getInteretPourVisiteur():
 			return random.randrange(0,2,1)
 		else:
 			print("Vos employés ne sont pas contents... Ils font fuir les clients!!\n")
-	if animalerie_choisie.getDegats() <= 13:
+	if animalerie_choisie.getDegats() <= 16:
 		return 1
 	if animalerie_choisie.getDegats() <= 20:
 		return random.randrange(0,2,1)
