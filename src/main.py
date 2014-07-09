@@ -26,7 +26,7 @@ liste_animaleries = []
 liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "embaucher_personnel", "virer_personnel","reparer", "q"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
-achat_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
+achat_nourriture = {"Hamster":0, "Chien":0, "Perruche":0}
 personnel_a_embaucher = []
 #Liste de tours représentant les jours de chaleur - pour la reproduction des animaux
 joursDeChaleur = [4,14,17,23,29]
