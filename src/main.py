@@ -24,7 +24,7 @@ difficulte = ""
 argentDepart = 0
 choix_animalerie = -1
 liste_animaleries = []
-liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "consulter_compte_banquaire", "embaucher_personnel", "virer_personnel","reparer", "q"]
+liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "embaucher_personnel", "virer_personnel","reparer", "q"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
 achat_nourriture = {"Hamster":0, "Dog":0, "Perruche":0}
@@ -270,7 +270,7 @@ def print_aide():
 	print('Liste des commandes:')
 	print('\taide:', 'affiche la liste des commandes du programme')
 	print('\tinfo_animaux:', 'affiche les informations concernant la liste des animaux achetés')
-	print('\tinfo_banquaire:', 'affiche les informtions banquaires du joueur')
+	print('\tinfo_banque:', 'affiche les informations banquaires du joueur')
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
 	print('\tembaucher_personnel:', 'permet d\'embauche du personnel (qualifié ou non)')
@@ -581,7 +581,7 @@ if __name__ == "__main__":
 			if (commande == "info_animaux"):
 				print_info_animaux()
 
-			if (commande == "consulter_compte_banquaire"):
+			if (commande == "info_banque"):
 				print_info_banquaire(player)
 
 			if (commande == "acheter_animal"):
