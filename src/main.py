@@ -595,6 +595,10 @@ if __name__ == "__main__":
 		#Check des employés contents/non-contents
 		checkEmployes()
 
+		#Arrivée des commandes et transfert sur le stock de l'animalerie
+		if (nbrTours != 0):
+			transfertCommande(player)
+
 		#Affichage des infos du joueur
 		printInfoJoueur(player)
 
@@ -604,10 +608,6 @@ if __name__ == "__main__":
 		printInfoAnimalerie()
 
 		print("\n")
-
-		#Arrivée des commandes et transfert sur le stock de l'animalerie
-		if (nbrTours != 0):
-			transfertCommande(player)
 
 		nbrCommandes = 0
 
