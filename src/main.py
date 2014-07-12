@@ -23,7 +23,7 @@ difficulte = ""
 argentDepart = 0
 choix_animalerie = -1
 liste_animaleries = []
-liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "embaucher_personnel", "virer_personnel","reparer", "q"]
+liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "embaucher", "virer","reparer", "q"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
 achat_nourriture = {"Hamster":0, "Chien":0, "Perruche":0}
@@ -320,8 +320,8 @@ def print_aide():
 	print('\tinfo_banque:', 'affiche les informations banquaires du joueur')
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
-	print('\tembaucher_personnel:', 'permet d\'embauche du personnel (qualifié ou non)')
-	print('\tvirer_personnel:', 'permet de virer du personnel, si vous en avez...')
+	print('\tembaucher:', 'permet d\'embauche du personnel (qualifié ou non)')
+	print('\tvirer:', 'permet de virer du personnel, si vous en avez...')
 	print('\treparer:', 'permet de réparer quelques dégats de son animalerie')
 	print('\tq:', 'permet de passer un tour')
 	print("\n")
@@ -644,10 +644,10 @@ if __name__ == "__main__":
 			if (commande == "acheter_nourriture"):
 				fun_acheter_nourriture(player)
 
-			if (commande == "embaucher_personnel"):
+			if (commande == "embaucher"):
 				fun_embaucher_personnel()
 
-			if (commande == "virer_personnel"):
+			if (commande == "virer"):
 				fun_virer_personnel(player)
 
 			if (commande == "reparer"):
