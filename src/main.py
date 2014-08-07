@@ -436,6 +436,8 @@ def fun_embaucher_personnel():
 			print("Vous avez embauché",personnel_a_embaucher[choixPersonnel].getNom(),"!")
 			print("\n")
 			del(personnel_a_embaucher[choixPersonnel])
+			animalerie_choisie.incrAttirance()
+			print("L'attirance envers votre animalerie a augmenté!")
 	else:
 		print("Il n'y a personne à embaucher!")
 
