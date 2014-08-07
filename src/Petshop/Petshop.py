@@ -202,6 +202,26 @@ class Petshop(object):
         "Méthode permettant d'incrémenter le nombre de visites du magasin"
         self._nbr_visites = self._nbr_visites + nbr
 
+    def getAttirance(self):
+        "Méthode permettant de retourner l'attirance de l'animalerie pour le(s) acheteur(s)"
+        return self._attirance
+
+    def decrAttirance(self):
+        "Méthode permettant de décrémenter l'attirance de l'animalerie"
+        self._attirance = self._attirance - 1
+        if self._attirance < 0:
+            self._attirance = 0
+
+    def incrAttirance(self):
+        "Méthode permettant d'incrémenter l'attirance de l'animalerie"
+        self._attirance = self._attirance + 1
+        if self._attirance > 20:
+            self._attirance = 20
+
+    def modAttirance(self, pts):
+        "Méthode permettant d'augmenter ou diminuer l'attirance de l'animalerie selon le paramètre 'pts'"
+        self._attirance = self._attirance + pts
+
     def printInfo(self):
         "Méthode permettant d'afficher toutes les informations déjà données, sur un objet Petshop"
         print("Nom de l'animalerie:",self.getNom())
