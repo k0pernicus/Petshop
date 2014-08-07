@@ -208,10 +208,10 @@ def getInteretPourVisiteur():
 			print("Vos employés ne sont pas contents... Ils font fuir les clients!!\n")
 	if animalerie_choisie.getDegats() <= 16:
 		return 1
-	if animalerie_choisie.getDegats() <= 20:
+	if animalerie_choisie.getDegats() <= 20 and animalerie_choisie.getAttirance() >= 13:
 		return random.randrange(0,2,1)
 	else:
-		print("Votre animalerie est en très mauvais état... Il va falloir la réparer!!\n")
+		print("Votre animalerie est en très mauvais état, et celà n'attire pas grand monde... Il va falloir la réparer!!\n")
 		return 0
 
 def addReproduction():
