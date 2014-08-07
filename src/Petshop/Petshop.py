@@ -185,10 +185,12 @@ class Petshop(object):
             for animal in animals:
                 if self._dict_nourriture[animal.getRace()] > 0:
                     self.rmNourritureParAnimal(animal.getRace(), animal.getConsommationUnite())
+                    incrAttirance()
                 else:
                     animal.diminuerPtsDeVie(1)
                     print("Un animal de type", animal.getRace(), "n'a plus de nourriture...")
                     pasContent = True
+                    decrAttirance()
         if pasContent:
             for employe in self.getListeEmployes():
                 employe.decrContent()
