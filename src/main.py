@@ -190,8 +190,11 @@ def setDateEmbauche(employe):
 def getInteretPourVisiteur():
 	"""Fonction permettant de connaitre l'intéret du visiteur pour acheter, en fonction de divers paramètres de l'animalerie..."""
 	global animalerie_choisie
-	#Calcul de la moyenne de contentement, chez les ouvriers
 	liste_employes = animalerie_choisie.getListeEmployes()
+	#Calcul de l'intérêt selon l'attirance envers l'animalerie
+	if animalerie_choisie.getAttirance() >= 18:
+		return 1
+	#Calcul de la moyenne de contentement, chez les ouvriers
 	if len(liste_employes) > 0:
 		taux_contentement = 0;
 		for employe in liste_employes:
