@@ -238,7 +238,7 @@ def addReproduction():
 					animalFemelle.setEnceinte()
 					print("Un animal de race", animalFemelle.getRace(),"est enceinte!\n")
 
-def surveillanceMiseABase():
+def surveillanceMiseABas():
 	"""Fonction permettant de surveiller si un animal va mettre à bas ou non..."""
 	global animalerie_choisie
 	decTpsGestationGlobal()
@@ -603,7 +603,7 @@ if __name__ == "__main__":
 		apport_soin_animaux()
 
 		#Surveillance de la mise à bas des animaux
-		surveillanceMiseABase()
+		surveillanceMiseABas()
 
 		#Paiement des employés
 		paiementDesEmployes(player)
