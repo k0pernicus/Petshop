@@ -354,6 +354,12 @@ def print_personnel_a_embaucher():
 		print("\n")
 	print("======== FIN LISTE PERSONNEL ========")
 
+def print_info_attirance():
+	"""Fonction permettant d'imprimer l'attirance de l'animalerie"""
+	global animalerie_choisie
+	print("\n");
+	print("L'attirance de votre animalerie est de %d", animalerie_choisie.getAttirance())
+
 # Fonctions FUN -> Fonctions lourdes, avec achat, visites, etc... Très importantes pour la suite d'un tour!
 
 def fun_acheter_animal(player):
