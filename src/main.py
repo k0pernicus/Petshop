@@ -321,6 +321,7 @@ def print_aide():
 	print('\taide:', 'affiche la liste des commandes du programme')
 	print('\tinfo_animaux:', 'affiche les informations concernant la liste des animaux achetés')
 	print('\tinfo_banque:', 'affiche les informations banquaires du joueur')
+	print('\tinfo_attirance', 'affiche l\'attirance de votre animalerie (sur le moment)')
 	print('\tacheter_animal:', 'permet d\'acheter un animal')
 	print('\tacheter_nourriture:', 'permet d\'acheter de la nourriture')
 	print('\tembaucher:', 'permet d\'embauche du personnel (qualifié ou non)')
