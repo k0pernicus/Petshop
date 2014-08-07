@@ -492,6 +492,8 @@ def fun_reparer(player):
 			animalerie_choisie.setDegats(0)
 		player.rmMontant(nbrDegats * 400)
 		print("Réparation de votre animalerie effectuée!\n")
+		animalerie_choisie.incrAttirance()
+		print("L'attirance envers votre animalerie a augmenté!")
 	else:
 		print("Vous n'avez pas assez de crédits pour effectuer une réparation...\n")
 
