@@ -32,6 +32,7 @@ class Petshop(object):
         self._liste_animaux = {"Hamster": [], "Chien": [], "Perruche": []}
         self._dict_nourriture = {"Hamster":0, "Chien":0, "Perruche":0}
         self._nbr_visites = 0
+        self._attirance = 20
 
     def __del__(self):
         """Déconstructeur d'une animalerie"""
