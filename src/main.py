@@ -470,6 +470,8 @@ def fun_virer_personnel(player):
 	print("Votre compte va être débité de", aDebiter,"au profit de",employeVire.getNom())
 	player.rmMontant(aDebiter)
 	animalerie_choisie.rmEmploye(employeVire)
+	animalerie_choisie.decrAttirance(1)
+	print("L'attirance envers votre animalerie a diminué...")
 
 def fun_reparer(player):
 	"""Fonction permettant de réparer quelques dégats de l'animalerie"""
