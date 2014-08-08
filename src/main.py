@@ -369,7 +369,7 @@ def fun_acheter_animal(player):
 	global achat_animaux
 	choixAnimal = ""
 	nbrAchat = -1
-	print("Veuillez entrer l'espèce animale que vous voulez choisir [Hamster, Perruche, Chien]: ")
+	print("Veuillez entrer l'espèce animale que vous voulez choisir [Hamster, Perruche, Chien, Serpent]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
 	print("Veuillez entrer le nombre d'animaux de cette espèce que vous voulez acheter [0 pour annuler]: ")
