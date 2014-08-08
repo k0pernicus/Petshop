@@ -23,7 +23,7 @@ difficulte = ""
 argentDepart = 0
 choix_animalerie = -1
 liste_animaleries = []
-liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "embaucher", "virer","reparer", "q"]
+liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "info_attirance", "embaucher", "virer","reparer", "q"]
 liste_animaux = ["Hamster", "Perruche", "Chien"]
 achat_animaux = []
 achat_nourriture = {"Hamster":0, "Chien":0, "Perruche":0}
@@ -653,6 +653,9 @@ if __name__ == "__main__":
 
 			if (commande == "info_banque"):
 				print_info_banquaire(player)
+
+			if (commande == "info_attirance"):
+				print_info_attirance();
 
 			if (commande == "acheter_animal"):
 				fun_acheter_animal(player)
