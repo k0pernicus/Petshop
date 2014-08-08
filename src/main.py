@@ -5,6 +5,7 @@ from Animals import Animal
 from Animals import Hamster
 from Animals import Perruche
 from Animals import Dog
+from Animals import Snake
 from Petshop import Petshop
 from Person import Person
 from Person import Player
@@ -24,9 +25,9 @@ argentDepart = 0
 choix_animalerie = -1
 liste_animaleries = []
 liste_cmd = ["aide", "acheter_animal", "acheter_nourriture", "info_animaux", "info_banque", "info_attirance", "embaucher", "virer","reparer", "q"]
-liste_animaux = ["Hamster", "Perruche", "Chien"]
+liste_animaux = ["Hamster", "Perruche", "Chien", "Serpent"]
 achat_animaux = []
-achat_nourriture = {"Hamster":0, "Chien":0, "Perruche":0}
+achat_nourriture = {"Hamster":0, "Chien":0, "Perruche":0, "Serpent":0}
 personnel_a_embaucher = []
 #Liste de tours représentant les jours de chaleur - pour la reproduction des animaux
 joursDeChaleur = [4,14,17,23,29]
@@ -389,6 +390,8 @@ def fun_acheter_animal(player):
 			animal = Perruche.Perruche(sexe)
 		if (choixAnimal == "Chien"):
 			animal = Dog.Dog(sexe)
+		if (choixAnimal == "Snake"):
+			animal = Snake.Snake(sexe)
 		player.rmMontant(animal.getPrixAchat())
 		achat_animaux.append(animal)
 		animal.printInfo()
