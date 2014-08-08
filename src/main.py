@@ -390,7 +390,7 @@ def fun_acheter_animal(player):
 			animal = Perruche.Perruche(sexe)
 		if (choixAnimal == "Chien"):
 			animal = Dog.Dog(sexe)
-		if (choixAnimal == "Snake"):
+		if (choixAnimal == "Serpent"):
 			animal = Snake.Snake(sexe)
 		player.rmMontant(animal.getPrixAchat())
 		achat_animaux.append(animal)
@@ -406,7 +406,7 @@ def fun_acheter_nourriture(player):
 	global achat_nourriture
 	choixAnimal = ""
 	nbreNourriture = -1
-	print("Veuillez entrer l'espèce animale dont vous voulez acheter de la nourriture [Hamster, Perruche, Chien]: ")
+	print("Veuillez entrer l'espèce animale dont vous voulez acheter de la nourriture [Hamster, Perruche, Chien, Serpent]: ")
 	while (choixAnimal not in liste_animaux):
 		choixAnimal = sys.stdin.readline().capitalize().strip()
 	print("Veuillez entrer le nombre de kilogrammes de nourriture que vous voulez acheter pour cet animal [0 pour annuler]:  ")
