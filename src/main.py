@@ -358,7 +358,8 @@ def print_info_attirance():
 	"""Fonction permettant d'imprimer l'attirance de l'animalerie"""
 	global animalerie_choisie
 	print("\n");
-	print("L'attirance de votre animalerie est de %d", animalerie_choisie.getAttirance())
+	print("L'attirance de votre animalerie est de", animalerie_choisie.getAttirance())
+	print("\n");
 
 # Fonctions FUN -> Fonctions lourdes, avec achat, visites, etc... Très importantes pour la suite d'un tour!
 
