@@ -29,8 +29,8 @@ class Petshop(object):
         self._player = player
         self._proprietaire = proprietaire
         self._liste_employes = []
-        self._liste_animaux = {"Hamster": [], "Chien": [], "Perruche": []}
-        self._dict_nourriture = {"Hamster":0, "Chien":0, "Perruche":0}
+        self._liste_animaux = {"Hamster": [], "Chien": [], "Perruche": [], "Serpent": []}
+        self._dict_nourriture = {"Hamster":0, "Chien":0, "Perruche":0, "Serpent":0}
         self._nbr_visites = 0
         self._attirance = 20
 
