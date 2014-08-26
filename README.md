@@ -1,12 +1,10 @@
 Petshop
 =======
 
-Petshop game - Python language
-------------------------------
+Petshop game (V1) - Python language
+-----------------------------------
 
 Petshop est un jeu se jouant exclusivement sur console, développé avec Python 3.4.
-
-Bêta test -> Linux, MacOS, Windows.
 
 Pour tester: 
 
@@ -17,4 +15,4 @@ N'hésitez pas à me contacter si vous avez des remarques à faire (antonin[dot]
 
 TODO:
 
-1.	Implémentation GUI
+1.	Implémentation GUI (V2)
